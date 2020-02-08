@@ -13,6 +13,22 @@ export class CrudServices<T> {
 
   setEntity(classType: new () => T) {
     this.classType = classType;
+    this.alias = this.classType.name.toLowerCase();
+  }
+
+  public async fetchAll() {
+    return await getManager().find(this.classType);
+  }
+
+  public async fetchPages(query: IFetchPageQuery) {
+    const recordsToSkip = (query.page - 1) * query.perPage;
+
+    if (query.search) {
+      return await getManager()
+        .createQueryBuilder(this.classType, this.alias)
+        .where(`${this.alias}.id like :id`, { id: `%${query.search}%` })
+        .skip(recordsToSkip)
+        .take(query.perPage)
         .getMany();
     } else {
       return await getManager()

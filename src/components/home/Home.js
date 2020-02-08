@@ -18,27 +18,6 @@ const styles = theme => ({
   }
 });
 
-class Home extends Component {
-  state = {
-    mobileOpen: false
-  };
-
-  handleDrawerToggle = () => {
-    this.setState({ mobileOpen: !this.state.mobileOpen });
-  };
-
-  render() {
-    const { classes } = this.props;
-    const { mobileOpen } = this.state;
-
-    const shouldRenderMobileMenu =
-      this.props.history.location.pathname === "/sale";
-
-    return (
-      <div className={classes.root}>
-        <Header
-          shouldRenderMobileMenu={shouldRenderMobileMenu}
-          handleDrawerToggle={this.handleDrawerToggle}
         />
         <Sidebar
           mobileOpen={mobileOpen}

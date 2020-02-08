@@ -18,27 +18,6 @@ class AutoSuggestWithApiDatasource extends Component {
 
   renderOptions = () => {
     const { datasource, onSelected } = this.props;
-
-    if (!datasource) {
-      return null;
-    }
-
-    return datasource.map(data => (
-      <ListItem button key={data.id} onClick={() => onSelected(data)}>
-        <ListItemText>
-          <span style={{ fontSize: "0.95rem" }}>{data.name}</span>
-        </ListItemText>
-      </ListItem>
-    ));
-  };
-
-  renderNoData = () => {
-    const { classes, width } = this.props;
-
-    return (
-      <Paper
-        elevation={4}
-        className={classes.ddItem}
         style={{ width, zIndex: 1000 }}
       >
         <List component="nav">

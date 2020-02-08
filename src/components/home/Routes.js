@@ -13,6 +13,22 @@ const Routes = () => (
     <Route exact path="/" component={() => <div />} />
 
     {/* Sale */}
+    <Route exact path="/sale" component={sale} />
+
+    {/* Receivings */}
+    <Route exact path="/receivings" component={receivings.Receivings} />
+    <Route exact path="/receivings/new" component={receivings.AddNew} />
+
+    {/* Vendor */}
+    <Route exact path="/vendors" component={vendor.Vendors} />
+    <Route exact path="/vendors/new" component={vendor.AddNew} />
+    <Route exact path="/vendors/edit/:id" component={vendor.AddNew} />
+
+    {/* Customer */}
+    <Route exact path="/customers" component={customer.Customers} />
+    <Route exact path="/customers/new" component={customer.AddNew} />
+    <Route exact path="/customers/edit/:id" component={customer.AddNew} />
+
     {/* Expense */}
     <Route exact path="/expense" component={expense.Expense} />
     <Route exact path="/expense/new" component={expense.AddNewExpense} />
