@@ -23,32 +23,6 @@ class AddNew extends Component {
     id: "",
     name: "",
     address: "",
-    mobile: "",
-    description: "",
-    email: ""
-  };
-
-  state = {
-    data: this.initialData,
-    errors: {},
-    showMessageDialog: false,
-    isLoading: false,
-    message: false,
-    showMessage: false,
-    isError: false,
-    isEdit: false
-  };
-
-  async componentDidMount() {
-    try {
-      const { id } = this.props.match.params;
-
-      if (!id) {
-        return;
-      }
-
-      this.setState({ isLoading: true });
-
       const stateToUpdate = {};
       const res = await api.vendor.fetchById(id);
 

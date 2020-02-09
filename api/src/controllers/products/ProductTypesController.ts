@@ -18,6 +18,27 @@ import {
   IPaginationQueryParam
 } from '../../decorators/PaginationInfo';
 
+@JsonController('/productTypes')
+@Authorized()
+export class ProductTypesController {
+  private crudServices: CrudServices<ProductType>;
+
+  constructor() {
+    this.crudServices = new CrudServices<ProductType>();
+    this.crudServices.setEntity(ProductType);
+  }
+
+  @Get('/all/items')
+  public async getAllProductTypes(): Promise<ProductType[]> {
+    return await this.crudServices.fetchAll();
+  }
+
+  @Get('/:id')
+  public async getProductTypeById(@Param('id') id: string): Promise<any> {
+    const res = await this.crudServices.fetchById(id);
+    return res || {};
+  }
+
   @Get()
   public async getProductTypes(
     @PaginationInfo() paginationInfo: IPaginationQueryParam,

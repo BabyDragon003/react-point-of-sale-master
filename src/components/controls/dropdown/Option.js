@@ -23,6 +23,3 @@ class Option extends Component {
       </MenuItem>
     );
   }
-}
-
-export default Option;
