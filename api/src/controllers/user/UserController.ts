@@ -1,4 +1,3 @@
-import { User } from "../../entity/User";
 import {
   Get,
   Post,

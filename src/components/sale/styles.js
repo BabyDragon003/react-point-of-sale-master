@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 const styles = theme => ({
   root: {
     padding: 10

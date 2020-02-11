@@ -1,4 +1,3 @@
-import React from "react";
 import FooterTableCell from "./FooterTableCell";
 import FooterTableRow from "./FooterTableRow";
 

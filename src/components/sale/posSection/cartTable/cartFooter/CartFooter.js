@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import { Table, TableBody } from "material-ui";
 import TotalRow from "./TotalRow";
 import TaxDiscountRow from "./TaxDiscountRow";

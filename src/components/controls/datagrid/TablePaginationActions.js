@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import { withStyles } from "material-ui/styles";
 import IconButton from "material-ui/IconButton";
 import FirstPageIcon from "material-ui-icons/FirstPage";
@@ -23,6 +22,32 @@ class TablePaginationActions extends Component {
       rowsPerPage,
       onFirst,
       onPrev,
+      onLast,
+      onNext
+    } = this.props;
+
+    return (
+      <div className={classes.root}>
+        <IconButton
+          onClick={onFirst}
+          disabled={page === 1}
+          aria-label="First Page"
+        >
+          <FirstPageIcon />
+        </IconButton>
+
+        <IconButton
+          onClick={onPrev}
+          disabled={page === 1}
+          aria-label="Previous Page"
+        >
+          <KeyboardArrowLeft />
+        </IconButton>
+
+        <IconButton
+          onClick={onNext}
+          disabled={page >= Math.ceil(count / rowsPerPage)}
+          aria-label="Next Page"
         >
           <KeyboardArrowRight />
         </IconButton>

@@ -1,4 +1,3 @@
-import { SalesService } from "../../services/SalesService";
 import {
   JsonController,
   Authorized,

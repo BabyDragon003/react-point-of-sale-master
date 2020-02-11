@@ -1,4 +1,3 @@
-import React from "react";
 import { TableRow } from "material-ui";
 import { withStyles } from "material-ui/styles";
 

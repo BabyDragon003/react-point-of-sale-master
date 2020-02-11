@@ -1,4 +1,3 @@
-import React, { Component, Fragment } from "react";
 import { withRouter } from "react-router";
 import { withStyles } from "material-ui/styles";
 import Hidden from "material-ui/Hidden";
@@ -23,6 +22,32 @@ const styles = theme => ({
     width: drawerWidth,
     height: "calc(100vh - 1px)",
     borderBottom: "1px solid #e0e0e0"
+  },
+  logo: {
+    height: "64px",
+    background: "#3f51b5"
+  },
+  logoContainer: {
+    padding: "18px 5px 5px 15px",
+    display: "flex",
+    color: "white",
+    "&:only-child > span": {
+      padding: "4px 0px 0px 10px",
+      fontWeight: "lighter"
+    }
+  }
+});
+
+class Sidebar extends Component {
+  renderMenus = () => {
+    const { classes } = this.props;
+
+    return (
+      <div>
+        <div className={classes.logo}>
+          <div className={classes.logoContainer}>
+            <ShoppingCart />
+            <span>Point Of Sale</span>
           </div>
         </div>
         <Divider />
