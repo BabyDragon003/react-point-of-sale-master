@@ -1,3 +1,4 @@
+import { createSelector } from "reselect";
 
 const getProductTypeSelector = () =>
   createSelector(

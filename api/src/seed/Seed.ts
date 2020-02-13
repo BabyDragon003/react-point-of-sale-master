@@ -1,3 +1,4 @@
+import { openConnection } from "../persistence";
 import { User, Role } from "../entity/User";
 import { getManager } from "typeorm";
 import { ProductType } from "../entity/ProductType";

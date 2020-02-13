@@ -1,3 +1,4 @@
+import React from "react";
 import currency from "currency.js";
 import { Paper } from "material-ui";
 import { withStyles } from "material-ui/styles";
@@ -7,17 +8,6 @@ import NumberTextField from "../../../controls/textfields/NumberTextField";
 
 const styles = theme => ({
   textField: {
-    width: "470px",
-    [theme.breakpoints.up("md")]: {
-      width: "470px"
-    }
-  }
-});
-
-const NormalSaleForm = props => {
-  const {
-    errors,
-    data,
     transactionId,
     cart,
     classes,

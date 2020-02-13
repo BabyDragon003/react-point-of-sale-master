@@ -1,3 +1,4 @@
+interface config {
   jwtSecret: string;
   tokenExpiry: string;
   refreshTokenExpiry: string;

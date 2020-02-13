@@ -1,3 +1,4 @@
+import { Product } from "../../entity/Product";
 import {
   Get,
   Post,

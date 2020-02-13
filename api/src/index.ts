@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { verify } from 'jsonwebtoken';
 import { openConnection } from './persistence';
 import { createExpressServer, useContainer, Action } from 'routing-controllers';
@@ -7,17 +8,6 @@ import { config } from './config';
 import { Role } from './entity/User';
 import { Claim } from './dtos/authTypes';
 
-async function authorizationChecker(
-  action: Action,
-  roles: Role[]
-): Promise<boolean> {
-  return new Promise<boolean>(resolve => {
-    const token = (action.request.headers['authorization'] || '').replace(
-      'Bearer ',
-      ''
-    );
-
-    if (!token) {
       throw new Error('Invalid token');
     }
 

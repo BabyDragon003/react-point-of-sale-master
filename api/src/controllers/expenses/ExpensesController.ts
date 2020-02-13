@@ -1,3 +1,4 @@
+import { Expense } from "../../entity/Expense";
 import {
   Get,
   Post,

@@ -1,3 +1,4 @@
+import { createConnection, Connection, ConnectionOptions } from 'typeorm';
 
 const configDev: ConnectionOptions = {
   type: 'sqlite',

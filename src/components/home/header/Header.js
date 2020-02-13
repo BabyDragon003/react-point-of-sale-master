@@ -1,3 +1,4 @@
+import React, { Component, Fragment } from "react";
 import classNames from "classnames";
 import { withStyles } from "material-ui/styles";
 import AppBar from "material-ui/AppBar";
@@ -7,17 +8,6 @@ import MenuIcon from "material-ui-icons/Menu";
 import Menus from "./Menus";
 
 const drawerWidth = 200;
-
-// eslint-disable-next-line
-const styles = theme => ({
-  appBar: {
-    position: "absolute",
-    marginLeft: drawerWidth,
-    [theme.breakpoints.up("md")]: {
-      width: `calc(100% - ${drawerWidth}px)`
-    }
-  },
-  appBarFullWidth: {
     width: "100%"
   },
   flex: {

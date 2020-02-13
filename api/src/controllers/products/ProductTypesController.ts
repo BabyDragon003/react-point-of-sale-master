@@ -1,3 +1,4 @@
+import { ProductType } from '../../entity/ProductType';
 import {
   Get,
   Post,

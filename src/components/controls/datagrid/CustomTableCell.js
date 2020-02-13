@@ -1,3 +1,4 @@
+import { withStyles } from "material-ui/styles";
 import { TableCell } from "material-ui/Table";
 
 const CustomTableCell = withStyles(() => ({
@@ -7,8 +8,3 @@ const CustomTableCell = withStyles(() => ({
     fontSize: 14
   },
   body: {
-    fontSize: 14
-  }
-}))(TableCell);
-
-export default CustomTableCell;

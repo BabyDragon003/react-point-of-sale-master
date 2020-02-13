@@ -1,3 +1,4 @@
+import { getManager } from "typeorm";
 import { User } from "../entity/User";
 import { UserLoginPost } from "../dtos/authTypes";
 
@@ -7,7 +8,3 @@ export class AuthServices {
     const user: User = await entityManager.findOne(User, {
       id: userPost.userid,
       password: userPost.password
-    });
-    return user;
-  }
-}

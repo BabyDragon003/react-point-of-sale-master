@@ -1,3 +1,4 @@
+{
   "devDependencies": {
     "@types/jsonwebtoken": "^7.2.7",
     "@types/node": "^8.0.29",

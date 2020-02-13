@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import currency from "currency.js";
 import { connect } from "react-redux";
 import { withStyles } from "material-ui/styles";

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component, Fragment } from "react";
 import FooterTableCell from "./FooterTableCell";
 import FooterTableRow from "./FooterTableRow";

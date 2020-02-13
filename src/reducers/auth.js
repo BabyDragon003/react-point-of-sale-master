@@ -1,3 +1,4 @@
+import update from "immutability-helper";
 import { USER_LOGGED_IN } from "../types";
 
 export default function user(state = {}, action = {}) {
@@ -7,6 +8,3 @@ export default function user(state = {}, action = {}) {
         tokens: { $set: action.authInfo }
       });
     default:
-      return state;
-  }
-}

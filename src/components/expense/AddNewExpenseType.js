@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import * as equal from "fast-deep-equal";
 import { withRouter } from "react-router";
 import Container from "../controls/Container";

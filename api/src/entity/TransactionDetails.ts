@@ -1,3 +1,4 @@
+import { Base } from "./Base";
 import { PrimaryColumn, ManyToOne, JoinColumn, Column, Entity } from "typeorm";
 import { Product } from "./Product";
 import { TransactionHeader } from "./TransactionHeader";
