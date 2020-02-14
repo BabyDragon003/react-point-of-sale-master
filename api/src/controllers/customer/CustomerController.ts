@@ -8,6 +8,17 @@ import {
   QueryParam,
   Param,
   Put,
+  Delete
+} from "routing-controllers";
+import {
+  PaginationInfo,
+  IPaginationQueryParam
+} from "../../decorators/PaginationInfo";
+import { CrudServices, IFetchPageQuery } from "../../services/CrudServices";
+import { CurrentUser } from "../../decorators/CurrentUser";
+
+@JsonController("/customers")
+@Authorized()
 export class CustomersController {
   private crudServices: CrudServices<Customer>;
 

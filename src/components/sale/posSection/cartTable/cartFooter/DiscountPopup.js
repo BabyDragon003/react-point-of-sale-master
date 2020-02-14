@@ -8,16 +8,11 @@ import {
   updateDiscountOnItems,
   updateDiscountOnTotal
 } from "../../../../../actions/cart";
-class DiscountPopup extends Component {
-  initialState = {
-    discount: "",
-    checkedB: false,
-    error: "",
-    discountText: "Apply to order total"
-  };
 
-  state = {
-    ...this.initialState
+const styles = () => ({
+  switch: {
+    marginLeft: "-20px"
+  },
   };
 
   onDiscountChange = e => {

@@ -8,3 +8,7 @@ export class AuthServices {
     const user: User = await entityManager.findOne(User, {
       id: userPost.userid,
       password: userPost.password
+    });
+    return user;
+  }
+}

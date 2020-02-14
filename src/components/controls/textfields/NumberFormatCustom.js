@@ -13,19 +13,3 @@ function NumberFormatCustom(props) {
         onChange({
           target: {
             value: values.value,
-            name
-          }
-        });
-      }}
-      thousandSeparator
-      prefix=""
-    />
-  );
-}
-
-NumberFormatCustom.propTypes = {
-  inputRef: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired
-};
-
-export default NumberFormatCustom;

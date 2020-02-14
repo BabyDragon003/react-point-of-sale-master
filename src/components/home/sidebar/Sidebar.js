@@ -8,16 +8,11 @@ import Divider from "material-ui/Divider";
 import Menus from "./Menus";
 
 const drawerWidth = 200;
-  drawerPaper2: {
+
+// eslint-disable-next-line
+const styles = theme => ({
+  drawerPaper: {
     width: drawerWidth,
-    height: "calc(100vh - 1px)",
-    borderBottom: "1px solid #e0e0e0"
-  },
-  logo: {
-    height: "64px",
-    background: "#3f51b5"
-  },
-  logoContainer: {
     padding: "18px 5px 5px 15px",
     display: "flex",
     color: "white",

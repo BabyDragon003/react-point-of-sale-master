@@ -8,16 +8,11 @@ import {
   QueryParam,
   Param,
   Put,
-export class VendorsController {
-  private crudServices: CrudServices<Vendor>;
-
-  constructor() {
-    this.crudServices = new CrudServices<Vendor>();
-    this.crudServices.setEntity(Vendor);
-  }
-
-  @Get("/:id")
-  public async getVendorById(@Param("id") id: string): Promise<any> {
+  Delete
+} from "routing-controllers";
+import {
+  PaginationInfo,
+  IPaginationQueryParam
     const res = await this.crudServices.fetchById(id);
     return res || {};
   }
