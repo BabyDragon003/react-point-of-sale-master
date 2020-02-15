@@ -13,16 +13,11 @@ export class TransactionDetails extends Base {
     datasource => datasource.transactionDetails,
     { onUpdate: "CASCADE", onDelete: "CASCADE" }
   )
-  @Column({ type: "float" })
-  costPrice: number;
+  @JoinColumn({ name: "id" })
+  transactionHeader: TransactionHeader;
 
-  @Column({ type: "float" })
-  sellingPrice: number;
-
-  @IsNumber()
-  @Min(0)
-  @Column({ type: "float" })
-  discount: number;
+  @ManyToOne(type => Product)
+  @JoinColumn({ name: "productId" })
 
   @IsNumber()
   @Min(0)

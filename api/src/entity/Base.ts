@@ -18,12 +18,3 @@ export abstract class Base {
     nullable: false
   })
   createdBy: string;
-
-  @Exclude()
-  @ManyToOne(type => User, {
-    onDelete: "NO ACTION",
-    onUpdate: "CASCADE",
-    nullable: false
-  })
-  updatedBy: string;
-}

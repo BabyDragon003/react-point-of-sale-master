@@ -18,7 +18,3 @@ const TotalBillRow = ({ classes, netTotal }) => (
       Net bill amount
     </FooterTableCell>
     <FooterTableCell numeric>{netTotal}</FooterTableCell>
-  </FooterTableRow>
-);
-
-export default withStyles(styles)(TotalBillRow);

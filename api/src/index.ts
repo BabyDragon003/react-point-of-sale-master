@@ -13,6 +13,22 @@ async function authorizationChecker(
   roles: Role[]
 ): Promise<boolean> {
   return new Promise<boolean>(resolve => {
+    const token = (action.request.headers['authorization'] || '').replace(
+      'Bearer ',
+      ''
+    );
+
+    if (!token) {
+      throw new Error('Invalid token');
+    }
+
+    verify(token, config.jwtSecret, (err, decoeded) => {
+      if (err) {
+        throw new Error('Token expired or invalid.');
+      }
+      action.request.token = decoeded;
+      if (roles.length > 0) {
+        const hasRights =
           roles.filter(r => r === (token as Claim).role).length > 0;
         if (hasRights === true) {
           resolve(true);

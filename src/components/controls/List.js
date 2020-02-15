@@ -18,7 +18,3 @@ export const CustomListItemText = props => {
     <ListItemText {...rest} style={{ padding: 2 }}>
       {children}
     </ListItemText>
-  );
-};
-
-// export default CustomListItemIcon;

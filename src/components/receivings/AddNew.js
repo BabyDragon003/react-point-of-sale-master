@@ -18,27 +18,6 @@ const styles = theme => ({
   form: {
     marginLeft: 20
   },
-  wrapper: {
-    position: "relative"
-  }
-});
-
-class AddNew extends Component {
-  initialData = {
-    productId: "pen",
-    vendorId: "mrlabs",
-    qty: "1",
-    price: "100",
-    paid: "100",
-    date: new Date()
-  };
-
-  state = {
-    data: this.initialData,
-    errors: {},
-    showMessageDialog: false,
-    productIds: [],
-    vendorIds: [],
     isLoading: false,
     message: false,
     showMessage: false,

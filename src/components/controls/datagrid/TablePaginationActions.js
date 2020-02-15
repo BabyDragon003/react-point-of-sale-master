@@ -18,27 +18,6 @@ class TablePaginationActions extends Component {
   render() {
     const {
       classes,
-      count,
-      page,
-      rowsPerPage,
-      onFirst,
-      onPrev,
-      onLast,
-      onNext
-    } = this.props;
-
-    return (
-      <div className={classes.root}>
-        <IconButton
-          onClick={onFirst}
-          disabled={page === 1}
-          aria-label="First Page"
-        >
-          <FirstPageIcon />
-        </IconButton>
-
-        <IconButton
-          onClick={onPrev}
           disabled={page === 1}
           aria-label="Previous Page"
         >
