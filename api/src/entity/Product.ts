@@ -23,17 +23,3 @@ export class Product extends Base {
 
   @IsPositive()
   @Column({ type: "float" })
-  sellingPrice: number;
-
-  @ManyToOne(type => ProductType, {
-    onDelete: "RESTRICT",
-    onUpdate: "CASCADE",
-    cascade: ["insert"]
-  })
-  @JoinColumn({ name: "productTypeId" })
-  productType: ProductType;
-
-  @IsNotEmpty()
-  @Column()
-  productTypeId: string;
-}

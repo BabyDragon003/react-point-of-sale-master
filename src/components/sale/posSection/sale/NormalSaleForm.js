@@ -18,6 +18,27 @@ const styles = theme => ({
 const NormalSaleForm = props => {
   const {
     errors,
+    data,
+    transactionId,
+    cart,
+    classes,
+    onChange,
+    onSubmit,
+    onCancel
+  } = props;
+  const { summary } = cart;
+
+  const totalDiscount = currency(summary.discountOnItems)
+    .add(summary.discountOnTotal)
+    .toString();
+
+  return (
+    <Paper>
+      <Form
+        style={{ marginLeft: "0px", padding: "15px" }}
+        id="customer"
+        onSubmit={onSubmit}
+        onCancel={onCancel}
       >
         <CustomLabel
           labelStyle={{ color: "red" }}
