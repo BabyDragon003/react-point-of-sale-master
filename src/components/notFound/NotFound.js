@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "../controls/Container";
 import SuccessMessage from "../controls/messages/SuccessMessage";
 

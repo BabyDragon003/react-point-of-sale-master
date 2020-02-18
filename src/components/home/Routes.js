@@ -1,4 +1,3 @@
-import React from "react";
 import { Switch, Route } from "react-router";
 import customer from "../customers";
 import expense from "../expense";

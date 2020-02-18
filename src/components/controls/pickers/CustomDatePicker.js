@@ -1,4 +1,3 @@
-import React from "react";
 import MomentUtils from "material-ui-pickers/utils/moment-utils";
 import MuiPickersUtilsProvider from "material-ui-pickers/utils/MuiPickersUtilsProvider";
 import DatePicker from "material-ui-pickers/DatePicker";
@@ -23,6 +22,32 @@ const styles = theme => ({
     marginTop: 20
   },
   textFieldFormLabel: {
+    fontSize: "1.05rem"
+  }
+});
+
+const CustomDatePicker = props => {
+  const { handleDateChange, classes, name, ...rest } = props;
+
+  const onDateChange = date => {
+    const target = {};
+    target.name = name;
+    // eslint-disable-next-line  no-underscore-dangle
+    target.value = date._d;
+    handleDateChange({ target });
+  };
+
+  return (
+    <MuiPickersUtilsProvider utils={MomentUtils}>
+      <DatePicker
+        placeholder="dd/mm/yyyy"
+        format="DD/MM/YYYY"
+        keyboard
+        mask={value =>
+          value
+            ? [/\d/, /\d/, "/", /\d/, /\d/, "/", /\d/, /\d/, /\d/, /\d/]
+            : []
+        }
         leftArrowIcon={<KeyboardArrowLeft />}
         rightArrowIcon={<KeyboardArrowRight />}
         InputLabelProps={{

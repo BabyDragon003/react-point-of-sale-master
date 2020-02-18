@@ -1,4 +1,3 @@
-import { combineReducers } from "redux";
 import { USER_LOGGED_OUT } from "../types";
 
 import auth from "./auth";

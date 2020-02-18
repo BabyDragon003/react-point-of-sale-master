@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import { withRouter } from "react-router";
 import { withStyles } from "material-ui/styles";
 import Header from "./header/Header";

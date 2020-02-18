@@ -1,4 +1,3 @@
-import { ExpenseType } from "../../entity/ExpenseType";
 import {
   Get,
   Post,

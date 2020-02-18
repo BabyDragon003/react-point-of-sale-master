@@ -1,4 +1,3 @@
-import * as currency from "currency.js";
 import { getManager, getConnection, EntityManager } from "typeorm";
 import { TransactionId } from "../entity/TransactionId";
 import { TransactionDetails } from "../entity/TransactionDetails";

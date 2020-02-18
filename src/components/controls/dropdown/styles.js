@@ -1,4 +1,3 @@
-const ITEM_HEIGHT = 48;
 
 const styles = theme => ({
   root: {

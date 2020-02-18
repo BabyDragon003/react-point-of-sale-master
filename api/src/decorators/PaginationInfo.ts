@@ -1,4 +1,3 @@
-import { createParamDecorator } from "routing-controllers";
 
 export interface IPaginationQueryParam {
   perPage: number;

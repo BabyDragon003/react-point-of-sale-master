@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import { connect } from "react-redux";
 import FormDialog from "../../../../controls/dialog/FormDialog";
 import NumberTextField from "../../../../controls/textfields/NumberTextField";

@@ -1,4 +1,3 @@
-import { Entity, Column, PrimaryColumn, JoinColumn, OneToOne } from "typeorm";
 import { Base } from "./Base";
 import { IsNotEmpty, Length, IsEmail } from "class-validator";
 

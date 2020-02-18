@@ -1,4 +1,3 @@
-import { getManager } from "typeorm";
 import { User } from "../entity/User";
 import { UserLoginPost } from "../dtos/authTypes";
 

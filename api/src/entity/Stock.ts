@@ -1,4 +1,3 @@
-import { Base } from "./Base";
 import { PrimaryColumn, OneToOne, Entity, JoinColumn, Column } from "typeorm";
 import { Product } from "./Product";
 import { IsNotEmpty } from "class-validator";
