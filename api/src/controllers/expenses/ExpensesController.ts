@@ -1,13 +1,8 @@
+import { Expense } from "../../entity/Expense";
 import {
   Get,
   Post,
   Body,
-  JsonController,
-  Authorized,
-  QueryParam,
-  Param,
-  Put,
-  Delete
 } from "routing-controllers";
 import {
   PaginationInfo,

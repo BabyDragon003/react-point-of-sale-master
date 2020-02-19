@@ -1,13 +1,8 @@
+import { Post, Body, JsonController, UseAfter } from "routing-controllers";
 import { AuthServices } from "../../services/AuthServices";
 import * as jwt from "jsonwebtoken";
 import { config } from "../../config";
 import { UserLoginPost, Claim } from "../../dtos/authTypes";
-
-@JsonController()
-export class AuthController {
-  constructor(private authServices: AuthServices) {}
-
-  @Post("/login")
   public async login(@Body() user: UserLoginPost) {
     const userDetails = await this.authServices.fetchUser(user);
 

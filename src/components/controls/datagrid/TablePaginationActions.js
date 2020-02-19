@@ -1,13 +1,8 @@
+import React, { Component } from "react";
 import { withStyles } from "material-ui/styles";
 import IconButton from "material-ui/IconButton";
 import FirstPageIcon from "material-ui-icons/FirstPage";
 import KeyboardArrowLeft from "material-ui-icons/KeyboardArrowLeft";
-import KeyboardArrowRight from "material-ui-icons/KeyboardArrowRight";
-import LastPageIcon from "material-ui-icons/LastPage";
-
-const styles = theme => ({
-  root: {
-    flexShrink: 0,
     color: theme.palette.text.secondary,
     marginLeft: theme.spacing.unit * 2.5
   }

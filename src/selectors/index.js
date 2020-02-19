@@ -1,13 +1,8 @@
+import { createSelector } from "reselect";
 
 const getProductTypeSelector = () =>
   createSelector(
     state => state.productType,
-    productType => {
-      if (productType.list) {
-        return productType;
-      }
-      return {
-        list: [],
         pagination: {},
         meta: {}
       };

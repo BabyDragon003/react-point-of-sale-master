@@ -1,13 +1,8 @@
+import React, { Component } from "react";
 import currency from "currency.js";
 import { connect } from "react-redux";
 import { withStyles } from "material-ui/styles";
 import FullPageDialog from "../../../controls/dialog/FullPageDialog";
-import api from "../../../../api";
-import Message from "../../../controls/Message";
-import { getCartItemsArraySelector } from "../../../../selectors";
-import NormalSaleForm from "./NormalSaleForm";
-import CircularLoader from "../../../controls/loader/CircularLoader";
-import {
   initTransaction,
   cancelTransaction
 } from "../../../../actions/transaction";

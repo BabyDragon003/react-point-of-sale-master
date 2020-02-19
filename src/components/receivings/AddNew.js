@@ -1,13 +1,8 @@
+import React, { Component } from "react";
 import * as equal from "fast-deep-equal";
 import { withRouter } from "react-router";
 import { withStyles } from "material-ui/styles";
 import Container from "../controls/Container";
-import Form from "../controls/Form";
-import Dropdown from "../controls/dropdown/Dropdown";
-import CircularLoader from "../controls/loader/CircularLoader";
-import api from "../../api";
-import NumberTextField from "../controls/textfields/NumberTextField";
-import { isValueExists } from "../../utils";
 import Message from "../controls/Message";
 import Prompt from "../controls/dialog/Prompt";
 import CustomDatePicker from "../controls/pickers/CustomDatePicker";
