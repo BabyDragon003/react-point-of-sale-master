@@ -3,15 +3,6 @@ import { createSelector } from "reselect";
 const getProductTypeSelector = () =>
   createSelector(
     state => state.productType,
-        pagination: {},
-        meta: {}
-      };
-    }
-  );
-
-const getProductTypeDataForDropdownSelector = () =>
-  createSelector(
-    state => state.productType,
     productType => {
       if (productType.list) {
         return productType;
@@ -22,7 +13,6 @@ const getProductTypeDataForDropdownSelector = () =>
         meta: {}
       };
     }
-  );
 
 const getCartItemsArraySelector = createSelector(
   state => state.cart.items,

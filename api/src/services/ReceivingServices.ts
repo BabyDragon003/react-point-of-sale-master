@@ -3,6 +3,12 @@ import { CrudServices, IFetchPageQuery } from "./CrudServices";
 import { Receiving } from "../entity/Receiving";
 import { Stock } from "../entity/Stock";
 
+export class ReceivingServices {
+  private crudServices: CrudServices<Receiving>;
+
+  constructor() {
+    this.crudServices = new CrudServices<Receiving>();
+    this.crudServices.setEntity(Receiving);
   }
 
   public async create(userId: string, receiving: Receiving) {

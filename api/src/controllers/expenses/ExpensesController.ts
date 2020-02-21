@@ -3,26 +3,16 @@ import {
   Get,
   Post,
   Body,
+  JsonController,
+  Authorized,
+  QueryParam,
+  Param,
+  Put,
+  Delete
 } from "routing-controllers";
 import {
   PaginationInfo,
   IPaginationQueryParam
-} from "../../decorators/PaginationInfo";
-import { CrudServices, IFetchPageQuery } from "../../services/CrudServices";
-import { CurrentUser } from "../../decorators/CurrentUser";
-
-@JsonController("/expenses")
-@Authorized()
-export class ExpensesController {
-  private crudServices: CrudServices<Expense>;
-
-  constructor() {
-    this.crudServices = new CrudServices<Expense>();
-    this.crudServices.setEntity(Expense);
-  }
-
-  @Get("/:id")
-  public async getExpenseById(@Param("id") id: string): Promise<any> {
     const res = await this.crudServices.fetchById(id);
     return res || {};
   }

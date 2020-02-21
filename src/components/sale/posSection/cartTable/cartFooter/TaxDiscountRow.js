@@ -3,26 +3,16 @@ import React, { Component, Fragment } from "react";
 import FooterTableCell from "./FooterTableCell";
 import FooterTableRow from "./FooterTableRow";
 import LinkButton from "../controls/LinkButton";
+import DiscountPopup from "./DiscountPopup";
+import TaxPopup from "./TaxPopup";
+
+class TaxDiscountRow extends Component {
+  state = {
+    showDiscount: false,
     showTax: false
   };
 
   toggleDiscount = () => {
-    this.setState({ showDiscount: !this.state.showDiscount });
-  };
-
-  toggleTax = () => {
-    this.setState({ showTax: !this.state.showTax });
-  };
-
-  render() {
-    const { cartArray, summary } = this.props;
-
-    const discountText = `${summary.discountOnItems} (${
-      summary.discountOnTotal
-    })`;
-    const { taxAmount, tax } = summary;
-
-    const { showDiscount, showTax } = this.state;
 
     return (
       <Fragment>

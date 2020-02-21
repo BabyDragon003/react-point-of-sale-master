@@ -3,26 +3,16 @@ import * as moment from "moment";
 import Button from "material-ui/Button";
 import { withRouter } from "react-router";
 import { withStyles } from "material-ui/styles";
+import Searchbox from "../controls/Searchbox";
+import api from "../../api";
+import ApiAutoFetchDatagrid from "../controls/datagrid/ApiAutoFetchDatagrid";
+import YesNo from "../controls/dialog/YesNo";
+import CircularLoader from "../controls/loader/CircularLoader";
+import Message from "../controls/Message";
 
 const styles = theme => ({
   leftIcon: {
     marginRight: theme.spacing.unit
-  },
-  button: {
-    margin: theme.spacing.unit
-  },
-  iconSmall: {
-    fontSize: 20
-  },
-  wrapper: {
-    marginTop: 20,
-    position: "relative"
-  }
-});
-
-class ExpenseTab extends Component {
-  expenseColumns = ["ID", "Description", "Amount", "Spent At", "Type"];
-
   state = {
     clearSearch: false,
     serachQuery: "",

@@ -3,26 +3,16 @@ import currency from "currency.js";
 import { connect } from "react-redux";
 import { withStyles } from "material-ui/styles";
 import FullPageDialog from "../../../controls/dialog/FullPageDialog";
+import api from "../../../../api";
+import Message from "../../../controls/Message";
+import { getCartItemsArraySelector } from "../../../../selectors";
+import NormalSaleForm from "./NormalSaleForm";
+import CircularLoader from "../../../controls/loader/CircularLoader";
+import {
   initTransaction,
   cancelTransaction
 } from "../../../../actions/transaction";
 import { emptyCart } from "../../../../actions/cart";
-import YesNo from "../../../controls/dialog/YesNo";
-
-const styles = () => ({
-  message: {
-    margin: 0,
-    paddingBottom: "10px"
-  },
-  formContainer: {
-    padding: "30px",
-    margin: "auto",
-    width: "500px",
-    height: "100%"
-  }
-});
-
-class NormalSale extends Component {
   state = {
     error: "",
     showMessage: false,

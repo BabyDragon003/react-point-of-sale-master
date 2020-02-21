@@ -3,26 +3,16 @@ import * as equal from "fast-deep-equal";
 import { withRouter } from "react-router";
 import { withStyles } from "material-ui/styles";
 import Container from "../controls/Container";
+import Form from "../controls/Form";
+import CustomTextField from "../controls/textfields/CustomTextField";
+import Dropdown from "../controls/dropdown/Dropdown";
+import CircularLoader from "../controls/loader/CircularLoader";
+import api from "../../api";
+import NumberTextField from "../controls/textfields/NumberTextField";
 import { isValueExists } from "../../utils";
 import Message from "../controls/Message";
 import Prompt from "../controls/dialog/Prompt";
 
-// eslint-disable-next-line
-const styles = theme => ({
-  form: {
-    marginLeft: 20
-  },
-  wrapper: {
-    position: "relative"
-  }
-});
-
-class AddNewProduct extends Component {
-  initialData = {
-    id: "",
-    name: "",
-    description: "",
-    costPrice: "",
     sellingPrice: "",
     productTypeId: ""
   };

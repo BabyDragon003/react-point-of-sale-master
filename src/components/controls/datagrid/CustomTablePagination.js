@@ -3,26 +3,16 @@ import { withStyles } from "material-ui/styles";
 import Toolbar from "material-ui/Toolbar";
 import Typography from "material-ui/Typography";
 import { TableCell } from "material-ui/Table";
+import TablePaginationActions from "./TablePaginationActions";
+
+export const styles = theme => ({
+  root: {
+    fontSize: theme.typography.pxToRem(12),
+    // Increase the specificity to override TableCell.
     "&:last-child": {
       padding: 0
     }
   },
-  toolbar: {
-    height: 56,
-    minHeight: 56,
-    paddingRight: 2
-  },
-  spacer: {
-    flex: "1 1 100%"
-  },
-  caption: {
-    flexShrink: 0
-  },
-  input: {
-    fontSize: "inherit",
-    flexShrink: 0
-  },
-  selectRoot: {
     marginRight: theme.spacing.unit * 4,
     marginLeft: theme.spacing.unit,
     color: theme.palette.text.secondary

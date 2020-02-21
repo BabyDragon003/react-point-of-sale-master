@@ -3,26 +3,16 @@ import {
   ADD_ITEM_TO_CART,
   REMOVE_ITEM_FROM_CART,
   UPDATE_CART_ITEM,
+  EMPTY_CART,
+  UPDATE_DISCOUNT_ON_TOTAL,
+  UPDATE_DISCOUNT_ON_ITEMS,
+  UPDATE_TAX
+} from "../types";
+
 const initialState = {
   items: {},
   summary: {
     noOfItems: 0,
-    noOfInividualItems: 0,
-    tax: "0",
-    taxAmount: "0.00",
-    discountOnTotal: "0.00",
-    discountOnItems: "0.00",
-    total: "0.00", // With discount on items
-    netTotal: "0.00" // Net - (tax + discount on total)
-  }
-};
-
-const cloneObj = state => {
-  const clone = {
-    items: {},
-    summary: {}
-  };
-
   Object.assign(clone.items, state.items);
   Object.assign(clone.summary, state.summary);
 
