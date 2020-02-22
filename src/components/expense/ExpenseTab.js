@@ -13,6 +13,22 @@ import Message from "../controls/Message";
 const styles = theme => ({
   leftIcon: {
     marginRight: theme.spacing.unit
+  },
+  button: {
+    margin: theme.spacing.unit
+  },
+  iconSmall: {
+    fontSize: 20
+  },
+  wrapper: {
+    marginTop: 20,
+    position: "relative"
+  }
+});
+
+class ExpenseTab extends Component {
+  expenseColumns = ["ID", "Description", "Amount", "Spent At", "Type"];
+
   state = {
     clearSearch: false,
     serachQuery: "",

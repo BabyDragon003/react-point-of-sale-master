@@ -13,16 +13,11 @@ const styles = theme => ({
       }
     }
   },
-
-  getClassName = () => {
-    const { isSelected, classes } = this.props;
-
-    if (isSelected) return classNames(classes.listItem, classes.selected);
-
-    return classNames(classes.listItem, classes.normal);
-  };
-
-  render() {
+  primary: {},
+  icon: {
+    width: 19
+  },
+  selected: {
     const { classes } = this.props;
 
     return (

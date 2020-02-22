@@ -13,16 +13,11 @@ const styles = () => ({
     fontSize: 14,
     borderRadius: 3
   }
-      <span>{props.message}</span>
-    </div>
-  );
-};
+});
 
-export default withStyles(styles, { withTheme: true })(ErrorMessage);
+const ErrorMessage = props => {
+  const style = {};
 
-/*
-    padding: 15px;
-    border: 1px solid #e91e639c;
     background: #f4433612;
     color: #f44336d6;
     margin: 25px 0px 10px 0px;

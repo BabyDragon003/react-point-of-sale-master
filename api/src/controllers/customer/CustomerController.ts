@@ -18,27 +18,6 @@ import { CrudServices, IFetchPageQuery } from "../../services/CrudServices";
 import { CurrentUser } from "../../decorators/CurrentUser";
 
 @JsonController("/customers")
-@Authorized()
-export class CustomersController {
-  private crudServices: CrudServices<Customer>;
-
-  constructor() {
-    this.crudServices = new CrudServices<Customer>();
-    this.crudServices.setEntity(Customer);
-  }
-
-  @Get("/:id")
-  public async getCustomerById(@Param("id") id: string): Promise<any> {
-    const res = await this.crudServices.fetchById(id);
-    return res || {};
-  }
-
-  @Get()
-  public async getCustomers(
-    @PaginationInfo() paginationInfo: IPaginationQueryParam,
-    @QueryParam("q") search?: string
-  ): Promise<Customer[]> {
-    const query: IFetchPageQuery = {
       search,
       perPage: paginationInfo.perPage,
       page: paginationInfo.pageNo

@@ -18,27 +18,6 @@ export class Seed {
 
   private static async addCustomer() {
     const customer = new Customer();
-    customer.id = "shan";
-    customer.name = "shan sfk";
-    customer.address = "my address";
-    customer.description = "test customer";
-    customer.email = "mail@mail.com";
-    customer.mobile = "1234567899";
-    customer.createdBy = "admin";
-    customer.updatedBy = "admin";
-
-    await getManager().insert(Customer, customer);
-  }
-
-  private static async addProducts() {
-    const pen = new Product();
-    pen.id = "pen";
-    pen.name = "pen";
-    pen.description = "awesome pen";
-    pen.costPrice = 10;
-    pen.sellingPrice = 20;
-    pen.productTypeId = "stat";
-    pen.createdBy = ADMIN_USER_ID;
     pen.updatedBy = ADMIN_USER_ID;
 
     await getManager().insert(Product, pen);

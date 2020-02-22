@@ -13,3 +13,8 @@ class PosSection extends Component {
         <CartTable />
         <Footer />
       </Fragment>
+    );
+  }
+}
+
+export default PosSection;

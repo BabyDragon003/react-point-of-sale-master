@@ -13,6 +13,22 @@ import YesNo from "../controls/dialog/YesNo";
 
 const styles = theme => ({
   leftIcon: {
+    marginRight: theme.spacing.unit
+  },
+  button: {
+    margin: theme.spacing.unit
+  },
+  iconSmall: {
+    fontSize: 20
+  },
+  wrapper: {
+    position: "relative",
+    margin: "20px 5px 5px 5px"
+  }
+});
+
+class Receivings extends Component {
+  receivingsColumns = [
     "Order Id",
     "Product",
     "Vendor",
