@@ -18,16 +18,11 @@ const styles = theme => ({
     },
     height: "calc(100vh - 1px)",
     borderBottom: "1px solid #e0e0e0"
-class Sidebar extends Component {
-  renderMenus = () => {
-    const { classes } = this.props;
-
-    return (
-      <div>
-        <div className={classes.logo}>
-          <div className={classes.logoContainer}>
-            <ShoppingCart />
-            <span>Point Of Sale</span>
+  },
+  drawerPaper2: {
+    width: drawerWidth,
+    height: "calc(100vh - 1px)",
+    borderBottom: "1px solid #e0e0e0"
           </div>
         </div>
         <Divider />

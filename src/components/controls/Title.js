@@ -23,6 +23,3 @@ function Title({ classes, title }) {
       <Divider />
     </Fragment>
   );
-}
-
-export default withStyles(styles, { withTheme: true })(Title);

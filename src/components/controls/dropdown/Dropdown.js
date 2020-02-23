@@ -18,3 +18,24 @@ const Dropdown = props => {
       name="react-select-chip-label"
       InputLabelProps={{
         shrink: true
+      }}
+      InputProps={{
+        inputComponent: SelectWrapped,
+        inputProps: {
+          classes,
+          instanceId: "react-select-chip-label",
+          id: "react-select-chip-label",
+          simpleValue: true,
+          options: datasource
+        }
+      }}
+    />
+  );
+};
+
+Dropdown.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(Dropdown);

@@ -18,3 +18,17 @@ export class GlobalErrorHandler implements ExpressErrorMiddlewareInterface {
     if (error) {
       if ((error as any).errors) {
         response.status(400).send(error);
+        return;
+      }
+
+      if ((error as any).code) {
+        response.status(400).send(error);
+        return;
+      }
+
+      response.status(500).send(error);
+      return;
+    }
+    next(null);
+  }
+}

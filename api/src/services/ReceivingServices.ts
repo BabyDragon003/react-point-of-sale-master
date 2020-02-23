@@ -23,32 +23,6 @@ export class ReceivingServices {
     try {
       await queryRunner.manager.insert(Receiving, receiving);
       await queryRunner.manager.increment(
-        Stock,
-        { id: receiving.product.id },
-        "count",
-        receiving.qty
-      );
-      // commit transaction.
-      await queryRunner.commitTransaction();
-    } catch (error) {
-      await queryRunner.rollbackTransaction();
-      throw error;
-    }
-  }
-
-  public async fetchPages(query: IFetchPageQuery): Promise<Receiving[]> {
-    return await this.crudServices.fetchPages(query);
-  }
-
-  public async fetchById(id: string | number): Promise<Receiving> {
-    return await this.crudServices.fetchById(id);
-  }
-
-  public async deleteById(id: string): Promise<any> {
-    return await this.crudServices.deleteById(id);
-  }
-
-  public async updateById(
     userId: string = "admin",
     where: object,
     data: any
