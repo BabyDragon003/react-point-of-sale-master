@@ -1,4 +1,3 @@
-import React from "react";
 import { withStyles } from "material-ui/styles";
 import Dialog from "material-ui/Dialog";
 import AppBar from "material-ui/AppBar";

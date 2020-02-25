@@ -1,4 +1,3 @@
-import { IsNumber, Min, IsNotEmpty } from "class-validator";
 import { SalesType } from "../entity/TransactionHeader";
 
 export class CheckoutSale {

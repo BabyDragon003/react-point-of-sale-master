@@ -1,4 +1,3 @@
-import React from "react";
 import CustomTableCell from "../controls/CustomTableCell";
 
 const NoItemsTableCell = () => (

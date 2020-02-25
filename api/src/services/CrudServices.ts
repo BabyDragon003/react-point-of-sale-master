@@ -1,4 +1,3 @@
-import { getManager, InsertResult, UpdateResult } from "typeorm";
 
 export interface IFetchPageQuery {
   search: string;

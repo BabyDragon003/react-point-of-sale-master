@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import currency from "currency.js";
 import { connect } from "react-redux";
 import { Switch, withStyles } from "material-ui";
@@ -23,6 +22,32 @@ class DiscountPopup extends Component {
   initialState = {
     discount: "",
     checkedB: false,
+    error: "",
+    discountText: "Apply to order total"
+  };
+
+  state = {
+    ...this.initialState
+  };
+
+  onDiscountChange = e => {
+    let discount = "";
+    const { value } = e.target;
+
+    if (value !== "") {
+      discount = e.target.value;
+    }
+
+    this.setState({ discount, error: "" });
+  };
+
+  onCancel = () => {
+    this.setState({ ...this.initialState });
+    this.props.close();
+  };
+
+  onSave = () => {
+    const { checkedB } = this.state;
     const { discount } = this.state;
 
     if (discount === "") {

@@ -1,4 +1,3 @@
-# react-point-of-sale
 
 A simple point of sale application built using react &amp; node.js.
 

@@ -1,4 +1,3 @@
-import { TableCell } from "material-ui";
 import { withStyles } from "material-ui/styles";
 
 const CustomTableCell = withStyles(theme => ({
