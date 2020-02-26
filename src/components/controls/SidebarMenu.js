@@ -1,13 +1,8 @@
+import React, { Component } from "react";
 import classNames from "classnames";
 import { withStyles } from "material-ui/styles";
 import { ListItem, ListItemIcon, ListItemText } from "material-ui/List";
 
-// eslint-disable-next-line
-const styles = theme => ({
-  listItem: {
-    "&:hover": {
-      backgroundColor: theme.palette.primary.main,
-      "& $primary, & $icon": {
         color: theme.palette.common.white
       }
     }

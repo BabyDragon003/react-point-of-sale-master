@@ -1,13 +1,8 @@
+import currency from "currency.js";
 import {
   ADD_ITEM_TO_CART,
   REMOVE_ITEM_FROM_CART,
   UPDATE_CART_ITEM,
-  EMPTY_CART,
-  UPDATE_DISCOUNT_ON_TOTAL,
-  UPDATE_DISCOUNT_ON_ITEMS,
-  UPDATE_TAX
-} from "../types";
-
 const initialState = {
   items: {},
   summary: {

@@ -1,13 +1,8 @@
+import React, { Component } from "react";
 import currency from "currency.js";
 import { connect } from "react-redux";
 import { Switch, withStyles } from "material-ui";
 import FormDialog from "../../../../controls/dialog/FormDialog";
-import NumberTextField from "../../../../controls/textfields/NumberTextField";
-import {
-  updateDiscountOnItems,
-  updateDiscountOnTotal
-} from "../../../../../actions/cart";
-
 const styles = () => ({
   switch: {
     marginLeft: "-20px"

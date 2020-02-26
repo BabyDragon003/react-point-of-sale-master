@@ -1,13 +1,8 @@
+// eslint-disable-next-line
 const styles = theme => ({
   root: {
     padding: 10
   },
-  flexContainer: {
-    display: "flex",
-    flexWrap: "wrap",
-    width: "100%",
-    height: "auto",
-    minHeight: "100%"
   },
   pos: {
     width: "460px",

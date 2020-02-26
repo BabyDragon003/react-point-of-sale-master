@@ -1,3 +1,4 @@
+import axios from "axios";
 import { setAuthorizationHeader } from "../utils";
 
 setAuthorizationHeader(sessionStorage.getItem("token"));

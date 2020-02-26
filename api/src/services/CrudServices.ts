@@ -1,13 +1,8 @@
+import { getManager, InsertResult, UpdateResult } from "typeorm";
 
 export interface IFetchPageQuery {
   search: string;
   perPage: number;
-  page: number;
-}
-
-export class CrudServices<T> {
-  protected classType: new () => T;
-
   protected alias: string;
 
   setEntity(classType: new () => T) {

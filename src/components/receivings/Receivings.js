@@ -1,13 +1,8 @@
+import React, { Component } from "react";
 import * as moment from "moment";
 import Button from "material-ui/Button";
 import { withRouter } from "react-router";
 import { withStyles } from "material-ui/styles";
-import Container from "../controls/Container";
-import Searchbox from "../controls/Searchbox";
-import Message from "../controls/Message";
-import ApiAutoFetchDatagrid from "../controls/datagrid/ApiAutoFetchDatagrid";
-import api from "../../api";
-import CircularLoader from "../controls/loader/CircularLoader";
 import YesNo from "../controls/dialog/YesNo";
 
 const styles = theme => ({

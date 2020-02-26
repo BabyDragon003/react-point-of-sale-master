@@ -1,3 +1,4 @@
+import { Entity, Column, PrimaryColumn } from 'typeorm';
 import { Base } from './Base';
 import { IsNotEmpty } from 'class-validator';
 

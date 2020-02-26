@@ -1,3 +1,4 @@
+import { Receiving } from "../../entity/Receiving";
 import {
   Get,
   Post,
