@@ -8,17 +8,6 @@ export class Customer extends Base {
   @PrimaryColumn()
   id: string;
 
-  @IsNotEmpty()
-  @Column()
-  name: string;
-
-  @Column({ nullable: true })
-  description?: string;
-
-  @IsNotEmpty()
-  @Column()
-  address: string;
-
   @Length(10, 10)
   @Column()
   mobile: string;

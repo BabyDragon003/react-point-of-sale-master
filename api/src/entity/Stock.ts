@@ -8,8 +8,3 @@ export class Stock extends Base {
   @OneToOne(type => Product)
   @JoinColumn({ name: "id" })
   @PrimaryColumn()
-  id: string;
-
-  @Column({ type: "float" })
-  qty: number;
-}

@@ -3,16 +3,11 @@ import * as equal from "fast-deep-equal";
 import { withRouter } from "react-router";
 import { withStyles } from "material-ui/styles";
 import Container from "../controls/Container";
-import Message from "../controls/Message";
-
-// eslint-disable-next-line
-const styles = theme => ({
-  form: {
-    marginLeft: 20
-  }
-});
-
-class AddNew extends Component {
+import Form from "../controls/Form";
+import { isValueExists, isValidEmail } from "../../utils";
+import CustomTextField from "../controls/textfields/CustomTextField";
+import api from "../../api";
+import Prompt from "../controls/dialog/Prompt";
   initialData = {
     id: "",
     name: "",
