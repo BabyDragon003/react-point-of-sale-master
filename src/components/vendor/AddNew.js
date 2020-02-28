@@ -8,16 +8,11 @@ import { isValueExists, isValidEmail } from "../../utils";
 import CustomTextField from "../controls/textfields/CustomTextField";
 import api from "../../api";
 import Prompt from "../controls/dialog/Prompt";
-  initialData = {
-    id: "",
-    name: "",
-    address: "",
-    mobile: "",
-    description: "",
-    email: ""
-  };
+import CircularLoader from "../controls/loader/CircularLoader";
+import Message from "../controls/Message";
 
-  state = {
+// eslint-disable-next-line
+const styles = theme => ({
     data: this.initialData,
     errors: {},
     showMessageDialog: false,

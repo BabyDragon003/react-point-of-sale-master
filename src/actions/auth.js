@@ -13,13 +13,3 @@ const userLoggedOut = () => ({
 
 export const loginUser = credentials => async dispatch => {
   console.log(process.env.IS_PROD);
-  const tokens = await api.auth.login(credentials);
-  setAuthorizationHeader(tokens.authToken);
-  dispatch(userLoggedIn(tokens));
-};
-
-export const logout = () => dispatch => {
-  sessionStorage.removeItem("token");
-  setAuthorizationHeader();
-  dispatch(userLoggedOut());
-};

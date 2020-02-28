@@ -13,22 +13,6 @@ const styles = theme => ({
     [theme.breakpoints.up("xs")]: {
       width: "calc(100vw - 20px)"
     },
-    [theme.breakpoints.up("md")]: {
-      width: "calc(100vw - 210px)"
-    },
-    [theme.breakpoints.up("lg")]: {
-      width: "100%"
-    },
-    height: `calc(100vh - 80px)`,
-    overflowX: "auto",
-    overflowY: "auto",
-    borderRadius: "0px"
-  },
-  fullWidthContainer: {
-    width: "100%"
-  }
-});
-
 class MainContainer extends Component {
   state = {};
 

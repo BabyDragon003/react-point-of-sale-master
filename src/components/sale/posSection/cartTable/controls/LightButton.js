@@ -8,3 +8,8 @@ const LightButton = ({ text, onClick }) => (
         textAlign: "left",
         paddingLeft: "8px",
         width: 150,
+        overflowWrap: "break-word"
+      }}
+    >
+      {text}
+    </p>

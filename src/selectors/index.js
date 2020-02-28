@@ -13,22 +13,6 @@ const getProductTypeSelector = () =>
         meta: {}
       };
     }
-  );
-
-const getProductTypeDataForDropdownSelector = () =>
-  createSelector(
-    state => state.productType,
-    productType => {
-      if (productType.list) {
-        return productType;
-      }
-      return {
-        list: [],
-        pagination: {},
-        meta: {}
-      };
-    }
-  );
 
 const getCartItemsArraySelector = createSelector(
   state => state.cart.items,

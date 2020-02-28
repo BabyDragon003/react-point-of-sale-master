@@ -13,22 +13,6 @@ class TaxDiscountRow extends Component {
   };
 
   toggleDiscount = () => {
-    this.setState({ showDiscount: !this.state.showDiscount });
-  };
-
-  toggleTax = () => {
-    this.setState({ showTax: !this.state.showTax });
-  };
-
-  render() {
-    const { cartArray, summary } = this.props;
-
-    const discountText = `${summary.discountOnItems} (${
-      summary.discountOnTotal
-    })`;
-    const { taxAmount, tax } = summary;
-
-    const { showDiscount, showTax } = this.state;
 
     return (
       <Fragment>

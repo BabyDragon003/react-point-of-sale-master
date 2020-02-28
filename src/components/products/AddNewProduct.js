@@ -13,22 +13,6 @@ import { isValueExists } from "../../utils";
 import Message from "../controls/Message";
 import Prompt from "../controls/dialog/Prompt";
 
-// eslint-disable-next-line
-const styles = theme => ({
-  form: {
-    marginLeft: 20
-  },
-  wrapper: {
-    position: "relative"
-  }
-});
-
-class AddNewProduct extends Component {
-  initialData = {
-    id: "",
-    name: "",
-    description: "",
-    costPrice: "",
     sellingPrice: "",
     productTypeId: ""
   };

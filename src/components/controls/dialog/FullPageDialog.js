@@ -13,22 +13,6 @@ const styles = {
   },
   title: {
     flex: 1,
-    paddingLeft: "5px",
-    fontWeight: 100,
-    fontSize: "20px"
-  },
-  subTitle: {
-    paddingLeft: "10px",
-    fontWeight: 100,
-    fontSize: "16px"
-  }
-};
-
-const Transition = props => <Slide direction="up" {...props} />;
-
-const FullPageDialog = ({ classes, open, handleClose, children, title }) => (
-  <Dialog
-    fullScreen
     open={open}
     onClose={handleClose}
     TransitionComponent={Transition}
