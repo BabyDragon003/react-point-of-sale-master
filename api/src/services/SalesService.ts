@@ -18,27 +18,6 @@ import {
 } from "../entity/TransactionHeader";
 
 import * as Messages from "./messages";
-
-export class SalesService {
-  public async initTransaction(userId: string = "admin"): Promise<number> {
-    let returnId: number = null;
-
-    const id = this.getIdPrefix();
-    const connection = getConnection();
-    const queryRunner = connection.createQueryRunner();
-
-    await queryRunner.connect();
-
-    // New transaction:
-    await queryRunner.startTransaction();
-
-    try {
-      const count = await queryRunner.manager.count(TransactionId, { id });
-
-      if (count > 0) {
-        await queryRunner.manager.increment(TransactionId, { id }, "count", 1);
-
-        const transactionId: TransactionId = await queryRunner.manager.findOne(
           TransactionId,
           id
         );

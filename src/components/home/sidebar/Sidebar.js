@@ -13,16 +13,11 @@ const drawerWidth = 200;
 const styles = theme => ({
   drawerPaper: {
     width: drawerWidth,
-    padding: "18px 5px 5px 15px",
-    display: "flex",
-    color: "white",
-    "&:only-child > span": {
-      padding: "4px 0px 0px 10px",
-      fontWeight: "lighter"
-    }
-  }
-});
-
+    [theme.breakpoints.up("md")]: {
+      position: "relative"
+    },
+    height: "calc(100vh - 1px)",
+    borderBottom: "1px solid #e0e0e0"
 class Sidebar extends Component {
   renderMenus = () => {
     const { classes } = this.props;
