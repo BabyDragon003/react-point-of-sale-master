@@ -18,6 +18,27 @@ const styles = theme => ({
     margin: theme.spacing.unit
   },
   iconSmall: {
+    fontSize: 20
+  },
+  wrapper: {
+    position: "relative",
+    margin: "20px 5px 5px 5px"
+  }
+});
+
+class Vendors extends Component {
+  vendorColumns = ["Id", "Name", "Description", "Address", "Mobile", "Email"];
+
+  state = {
+    clearSearch: false,
+    serachQuery: "",
+    message: "",
+    showMessage: false,
+    isError: false,
+    isLoading: false,
+    showConfirmDeleteDialog: false
+  };
+
   onListClick = () => {
     this.setState({ clearSearch: true, serachQuery: "", showMessage: false });
   };

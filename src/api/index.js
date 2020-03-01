@@ -18,6 +18,27 @@ const auth = {
       if (error.response && error.response.status === 401)
         throw new Error("Invalid credentials.");
       if (error.response && error.response.status > 200)
+        throw new Error("Server error, please try again after sometime.");
+      else throw error;
+    }
+  }
+};
+
+const productType = apiBuilder("producttypes");
+
+const expenseType = apiBuilder("expensetypes");
+
+const expense = apiBuilder("expenses");
+
+const product = apiBuilder("products");
+
+const customer = apiBuilder("customers");
+
+const vendor = apiBuilder("vendors");
+
+const receiving = apiBuilder("receivings");
+
+export default {
   auth,
   productType,
   product,

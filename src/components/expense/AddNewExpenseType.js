@@ -18,6 +18,27 @@ class AddNewExpenseType extends Component {
 
   state = {
     data: this.initialData,
+    showMessage: false,
+    errors: {},
+    showMessageDialog: false,
+    isLoading: false,
+    isEdit: false
+  };
+
+  async componentDidMount() {
+    try {
+      const { id } = this.props.match.params;
+
+      if (!id) {
+        return;
+      }
+
+      this.setState({ isLoading: true });
+
+      const stateToUpdate = {};
+      const res = await api.expenseType.fetchById(id);
+
+      stateToUpdate.data = res.data;
       stateToUpdate.isLoading = false;
       stateToUpdate.isEdit = true;
 

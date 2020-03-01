@@ -18,6 +18,27 @@ const styles = theme => ({
       width: 500
     },
     marginRight: 10
+  },
+  textFieldFormLabel: {
+    fontSize: "1.05rem"
+  }
+});
+
+const NumberTextField = props => {
+  const { classes, autoComplete, className, ...rest } = props;
+  let ac = "off";
+  if (autoComplete !== undefined) ac = autoComplete;
+
+  let clsName = classes.textField;
+  if (className) {
+    clsName = classNames(classes.textField, className);
+  }
+
+  return (
+    <Fragment>
+      <TextField
+        {...rest}
+        InputLabelProps={{
           shrink: true,
           className: classes.textFieldFormLabel
         }}
