@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import * as moment from "moment";
 import Button from "material-ui/Button";
 import { withRouter } from "react-router";

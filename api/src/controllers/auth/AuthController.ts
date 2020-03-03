@@ -1,4 +1,3 @@
-import { Post, Body, JsonController, UseAfter } from "routing-controllers";
 import { AuthServices } from "../../services/AuthServices";
 import * as jwt from "jsonwebtoken";
 import { config } from "../../config";

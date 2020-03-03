@@ -1,4 +1,3 @@
-import { IsNotEmpty } from "class-validator";
 import { Role } from "../entity/User";
 
 export class UserLoginPost {

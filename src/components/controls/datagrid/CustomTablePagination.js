@@ -1,4 +1,3 @@
-import React from "react";
 import { withStyles } from "material-ui/styles";
 import Toolbar from "material-ui/Toolbar";
 import Typography from "material-ui/Typography";

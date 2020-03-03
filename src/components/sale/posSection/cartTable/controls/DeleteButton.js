@@ -1,4 +1,3 @@
-import React from "react";
 import DeleteIcon from "material-ui-icons/Delete";
 import { IconButton, withStyles } from "material-ui";
 

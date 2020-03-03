@@ -1,4 +1,3 @@
-import React, { Fragment } from "react";
 import Divider from "material-ui/Divider";
 import { withStyles } from "material-ui";
 
@@ -23,3 +22,6 @@ function Title({ classes, title }) {
       <Divider />
     </Fragment>
   );
+}
+
+export default withStyles(styles, { withTheme: true })(Title);

@@ -1,4 +1,3 @@
-import { INIT_TRANSACTION, CANCEL_TRANSACTION } from "../types";
 
 export default function transaction(state = {}, action = {}) {
   switch (action.type) {

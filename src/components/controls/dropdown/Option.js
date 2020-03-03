@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import { MenuItem } from "material-ui/Menu";
 
 class Option extends Component {
@@ -23,3 +22,6 @@ class Option extends Component {
       </MenuItem>
     );
   }
+}
+
+export default Option;
