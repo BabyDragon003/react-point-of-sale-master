@@ -1,3 +1,4 @@
+import React, { Component, Fragment } from "react";
 import { withStyles } from "material-ui/styles";
 import Clear from "material-ui-icons/Clear";
 import classNames from "classnames";

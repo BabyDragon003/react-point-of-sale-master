@@ -1,3 +1,4 @@
+import React from "react";
 import currency from "currency.js";
 import { withStyles } from "material-ui/styles";
 import FooterPriceLabel from "./FooterPriceLabel";

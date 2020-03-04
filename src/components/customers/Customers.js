@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import Button from "material-ui/Button";
 import { withRouter } from "react-router";
 import { withStyles } from "material-ui/styles";

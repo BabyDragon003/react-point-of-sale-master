@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withStyles, Button } from "material-ui";
 import NormalSale from "../sale/NormalSale";

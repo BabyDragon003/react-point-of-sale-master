@@ -1,13 +1,8 @@
+import React, { Component, Fragment } from "react";
 import { withRouter } from "react-router";
 import { withStyles } from "material-ui/styles";
 import Hidden from "material-ui/Hidden";
 import Drawer from "material-ui/Drawer";
-import ShoppingCart from "material-ui-icons/ShoppingCart";
-import Divider from "material-ui/Divider";
-import Menus from "./Menus";
-
-const drawerWidth = 200;
-
 // eslint-disable-next-line
 const styles = theme => ({
   drawerPaper: {
