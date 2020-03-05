@@ -3,16 +3,11 @@ import * as moment from "moment";
 import Button from "material-ui/Button";
 import { withRouter } from "react-router";
 import { withStyles } from "material-ui/styles";
-import YesNo from "../controls/dialog/YesNo";
-
-const styles = theme => ({
-  leftIcon: {
-    marginRight: theme.spacing.unit
-  },
-  button: {
-    margin: theme.spacing.unit
-  },
-  iconSmall: {
+import Container from "../controls/Container";
+import Searchbox from "../controls/Searchbox";
+import Message from "../controls/Message";
+import ApiAutoFetchDatagrid from "../controls/datagrid/ApiAutoFetchDatagrid";
+import api from "../../api";
     fontSize: 20
   },
   wrapper: {

@@ -3,6 +3,12 @@ import { Switch, Route } from "react-router";
 import customer from "../customers";
 import expense from "../expense";
 import receivings from "../receivings";
+import product from "../products";
+import vendor from "../vendor";
+import sale from "../sale";
+import NotFound from "../notFound/NotFound";
+
+const Routes = () => (
   <Switch style={{ overflow: "auto" }}>
     <Route exact path="/" component={() => <div />} />
 

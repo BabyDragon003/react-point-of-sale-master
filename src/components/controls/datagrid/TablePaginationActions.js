@@ -3,16 +3,11 @@ import { withStyles } from "material-ui/styles";
 import IconButton from "material-ui/IconButton";
 import FirstPageIcon from "material-ui-icons/FirstPage";
 import KeyboardArrowLeft from "material-ui-icons/KeyboardArrowLeft";
-    color: theme.palette.text.secondary,
-    marginLeft: theme.spacing.unit * 2.5
-  }
-});
+import KeyboardArrowRight from "material-ui-icons/KeyboardArrowRight";
+import LastPageIcon from "material-ui-icons/LastPage";
 
-class TablePaginationActions extends Component {
-  render() {
-    const {
-      classes,
-      count,
+const styles = theme => ({
+  root: {
       page,
       rowsPerPage,
       onFirst,
