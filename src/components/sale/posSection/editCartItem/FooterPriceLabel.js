@@ -13,14 +13,3 @@ const styles = () => ({
     fontSize: "13px"
   }
 });
-
-const FooterPriceLabel = ({ price, title, classes }) => (
-  <Fragment>
-    <span className={classes.title}>{title}</span>
-    <span className={classes.price}>
-      {price} {"₹"}
-    </span>
-  </Fragment>
-);
-
-export default withStyles(styles)(FooterPriceLabel);

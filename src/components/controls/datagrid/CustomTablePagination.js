@@ -13,22 +13,6 @@ export const styles = theme => ({
       padding: 0
     }
   },
-  toolbar: {
-    height: 56,
-    minHeight: 56,
-    paddingRight: 2
-  },
-  spacer: {
-    flex: "1 1 100%"
-  },
-  caption: {
-    flexShrink: 0
-  },
-  input: {
-    fontSize: "inherit",
-    flexShrink: 0
-  },
-  selectRoot: {
     marginRight: theme.spacing.unit * 4,
     marginLeft: theme.spacing.unit,
     color: theme.palette.text.secondary

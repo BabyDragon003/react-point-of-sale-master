@@ -8,16 +8,11 @@ import Searchbox from "../controls/Searchbox";
 import Message from "../controls/Message";
 import ApiAutoFetchDatagrid from "../controls/datagrid/ApiAutoFetchDatagrid";
 import api from "../../api";
-    fontSize: 20
-  },
-  wrapper: {
-    position: "relative",
-    margin: "20px 5px 5px 5px"
-  }
-});
+import CircularLoader from "../controls/loader/CircularLoader";
+import YesNo from "../controls/dialog/YesNo";
 
-class Receivings extends Component {
-  receivingsColumns = [
+const styles = theme => ({
+  leftIcon: {
     "Order Id",
     "Product",
     "Vendor",

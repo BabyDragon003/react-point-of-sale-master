@@ -8,6 +8,17 @@ export abstract class Base {
   createdAt?: Date;
 
   @Exclude()
+  @UpdateDateColumn()
+  updatedAt?: Date;
+
+  @Exclude()
+  @ManyToOne(type => User, {
+    onDelete: "NO ACTION",
+    onUpdate: "CASCADE",
+    nullable: false
+  })
+  createdBy: string;
+
   @Exclude()
   @ManyToOne(type => User, {
     onDelete: "NO ACTION",

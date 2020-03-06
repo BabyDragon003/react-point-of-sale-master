@@ -8,3 +8,8 @@ const CustomTableCell = withStyles(() => ({
     fontSize: 14
   },
   body: {
+    fontSize: 14
+  }
+}))(TableCell);
+
+export default CustomTableCell;

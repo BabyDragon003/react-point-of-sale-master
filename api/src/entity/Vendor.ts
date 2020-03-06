@@ -13,19 +13,3 @@ export class Vendor extends Base {
   name: string;
 
   @Column({ nullable: true })
-  description?: string;
-
-  @IsNotEmpty()
-  @Column()
-  address: string;
-
-  @IsNotEmpty()
-  @Length(10, 10)
-  @Column()
-  mobile: string;
-
-  @IsNotEmpty()
-  @IsEmail()
-  @Column()
-  email: string;
-}
