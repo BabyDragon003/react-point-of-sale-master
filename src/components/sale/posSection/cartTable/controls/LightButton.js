@@ -13,3 +13,7 @@ const LightButton = ({ text, onClick }) => (
     >
       {text}
     </p>
+  </Button>
+);
+
+export default LightButton;

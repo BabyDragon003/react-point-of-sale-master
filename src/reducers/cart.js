@@ -13,6 +13,22 @@ const initialState = {
   items: {},
   summary: {
     noOfItems: 0,
+    noOfInividualItems: 0,
+    tax: "0",
+    taxAmount: "0.00",
+    discountOnTotal: "0.00",
+    discountOnItems: "0.00",
+    total: "0.00", // With discount on items
+    netTotal: "0.00" // Net - (tax + discount on total)
+  }
+};
+
+const cloneObj = state => {
+  const clone = {
+    items: {},
+    summary: {}
+  };
+
   Object.assign(clone.items, state.items);
   Object.assign(clone.summary, state.summary);
 

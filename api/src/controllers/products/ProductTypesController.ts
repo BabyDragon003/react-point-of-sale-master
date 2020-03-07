@@ -13,15 +13,10 @@ import {
 import { CrudServices, IFetchPageQuery } from '../../services/CrudServices';
 import { CurrentUser } from '../../decorators/CurrentUser';
 
-  public async getAllProductTypes(): Promise<ProductType[]> {
-    return await this.crudServices.fetchAll();
-  }
-
-  @Get('/:id')
-  public async getProductTypeById(@Param('id') id: string): Promise<any> {
-    const res = await this.crudServices.fetchById(id);
-    return res || {};
-  }
+import {
+  PaginationInfo,
+  IPaginationQueryParam
+} from '../../decorators/PaginationInfo';
 
   @Get()
   public async getProductTypes(

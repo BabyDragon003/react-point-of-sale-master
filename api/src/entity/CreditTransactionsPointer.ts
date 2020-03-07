@@ -13,3 +13,4 @@ export class CreditTransactionsPointer extends Base {
   @Column() seqPointer: number;
 
   @Column() balanceAmount: number;
+}

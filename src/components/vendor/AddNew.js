@@ -13,6 +13,22 @@ import Message from "../controls/Message";
 
 // eslint-disable-next-line
 const styles = theme => ({
+  form: {
+    marginLeft: 20
+  }
+});
+
+class AddNew extends Component {
+  initialData = {
+    id: "",
+    name: "",
+    address: "",
+    mobile: "",
+    description: "",
+    email: ""
+  };
+
+  state = {
     data: this.initialData,
     errors: {},
     showMessageDialog: false,

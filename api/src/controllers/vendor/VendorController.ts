@@ -13,6 +13,22 @@ import {
 import {
   PaginationInfo,
   IPaginationQueryParam
+} from "../../decorators/PaginationInfo";
+import { CrudServices, IFetchPageQuery } from "../../services/CrudServices";
+import { CurrentUser } from "../../decorators/CurrentUser";
+
+@JsonController("/vendors")
+@Authorized()
+export class VendorsController {
+  private crudServices: CrudServices<Vendor>;
+
+  constructor() {
+    this.crudServices = new CrudServices<Vendor>();
+    this.crudServices.setEntity(Vendor);
+  }
+
+  @Get("/:id")
+  public async getVendorById(@Param("id") id: string): Promise<any> {
     const res = await this.crudServices.fetchById(id);
     return res || {};
   }
