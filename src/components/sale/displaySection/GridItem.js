@@ -18,6 +18,27 @@ class GridItem extends Component {
     return (
       <Paper
         style={{
+          width: 150,
+          height: 150,
+          overflow: "auto",
+          display: "inline-block"
+        }}
+      >
+        <div style={{ paddingTop: 30 }}>
+          <Avatar style={{ margin: "auto" }} className={classes.purpleAvatar}>
+            BR
+          </Avatar>
+        </div>
+        <div style={{ textAlign: "center" }}>
+          <p
+            style={{
+              width: 130,
+              overflowWrap: "break-word",
+              padding: 5,
+              fontSize: "13px"
+            }}
+          >
+            Britania Tiger
           </p>
         </div>
       </Paper>

@@ -23,32 +23,6 @@ async function authorizationChecker(
     }
 
     verify(token, config.jwtSecret, (err, decoeded) => {
-      if (err) {
-        throw new Error('Token expired or invalid.');
-      }
-      action.request.token = decoeded;
-      if (roles.length > 0) {
-        const hasRights =
-          roles.filter(r => r === (token as Claim).role).length > 0;
-        if (hasRights === true) {
-          resolve(true);
-        } else {
-          throw new Error("You don't have rights to do this operation");
-        }
-      } else {
-        resolve(true);
-      }
-    });
-  });
-}
-
-async function createServer(): Promise<any> {
-  try {
-    await openConnection();
-
-    // its important to set container before any operation you do with routing-controllers,
-    // including importing controllers
-    useContainer(Container);
 
     const app: Application = createExpressServer({
       authorizationChecker: authorizationChecker,

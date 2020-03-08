@@ -18,6 +18,27 @@ const styles = theme => ({
   }
 });
 
+class AddNewProductType extends Component {
+  initialData = {
+    id: "",
+    description: ""
+  };
+
+  state = {
+    data: this.initialData,
+    showMessage: false,
+    errors: {},
+    showMessageDialog: false,
+    isLoading: false,
+    isEdit: false
+  };
+
+  async componentDidMount() {
+    try {
+      const { id } = this.props.match.params;
+
+      if (!id) {
+        return;
       }
 
       this.setState({ isLoading: true });

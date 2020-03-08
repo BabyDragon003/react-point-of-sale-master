@@ -18,3 +18,4 @@ const FooterTableCell = ({ classes, children, ...rest }) => (
   </CustomTableCell>
 );
 
+export default withStyles(styles)(FooterTableCell);
