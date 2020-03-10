@@ -1,4 +1,3 @@
-import { Entity, Column, PrimaryColumn, JoinColumn, ManyToOne } from "typeorm";
 import { Base } from "./Base";
 import { ProductType } from "./ProductType";
 import { IsNotEmpty, IsPositive } from "class-validator";
@@ -23,3 +22,17 @@ export class Product extends Base {
 
   @IsPositive()
   @Column({ type: "float" })
+  sellingPrice: number;
+
+  @ManyToOne(type => ProductType, {
+    onDelete: "RESTRICT",
+    onUpdate: "CASCADE",
+    cascade: ["insert"]
+  })
+  @JoinColumn({ name: "productTypeId" })
+  productType: ProductType;
+
+  @IsNotEmpty()
+  @Column()
+  productTypeId: string;
+}

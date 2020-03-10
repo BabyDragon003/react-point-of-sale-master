@@ -1,4 +1,3 @@
-import React, { Component, Fragment } from "react";
 import classNames from "classnames";
 import { withStyles } from "material-ui/styles";
 import AppBar from "material-ui/AppBar";

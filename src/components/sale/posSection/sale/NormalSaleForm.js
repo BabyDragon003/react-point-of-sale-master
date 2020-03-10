@@ -1,4 +1,3 @@
-import React from "react";
 import currency from "currency.js";
 import { Paper } from "material-ui";
 import { withStyles } from "material-ui/styles";

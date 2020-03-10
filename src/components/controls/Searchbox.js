@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import { withStyles } from "material-ui/styles";
 import { InputAdornment } from "material-ui/Input";
 import IconButton from "material-ui/IconButton";

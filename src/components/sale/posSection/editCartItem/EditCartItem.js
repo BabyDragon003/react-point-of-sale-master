@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import currency from "currency.js";
 import FormDialog from "../../../controls/dialog/FormDialog";
 import CustomTextField from "../../../controls/textfields/CustomTextField";
