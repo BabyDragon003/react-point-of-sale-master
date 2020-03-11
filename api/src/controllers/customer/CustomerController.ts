@@ -1,3 +1,4 @@
+import { Customer } from "../../entity/Customer";
 import {
   Get,
   Post,

@@ -1,13 +1,8 @@
+import {
   Entity,
   Column,
   JoinColumn,
   ManyToOne,
-  PrimaryGeneratedColumn
-} from "typeorm";
-import { Base } from "./Base";
-import { ExpenseType } from "./ExpenseType";
-import { IsNotEmpty, IsPositive } from "class-validator";
-
 @Entity()
 export class Expense extends Base {
   @PrimaryGeneratedColumn() id: string;

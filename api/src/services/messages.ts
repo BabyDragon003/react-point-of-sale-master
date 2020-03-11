@@ -1,3 +1,4 @@
+import { IMessage } from "../dtos/messages";
 
 export const TRANSACTION_ID_NOT_FOUND: IMessage = {
   code: "TRANSACTION_ID_NOT_FOUND",

@@ -1,13 +1,8 @@
+import 'reflect-metadata';
 import { verify } from 'jsonwebtoken';
 import { openConnection } from './persistence';
 import { createExpressServer, useContainer, Action } from 'routing-controllers';
 import { Container } from 'typedi';
-import { Application } from 'express';
-import { config } from './config';
-import { Role } from './entity/User';
-import { Claim } from './dtos/authTypes';
-
-async function authorizationChecker(
   action: Action,
   roles: Role[]
 ): Promise<boolean> {

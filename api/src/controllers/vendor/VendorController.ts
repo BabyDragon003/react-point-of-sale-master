@@ -1,13 +1,8 @@
+import { Vendor } from "../../entity/Vendor";
 import {
   Get,
   Post,
   Body,
-  JsonController,
-  Authorized,
-  QueryParam,
-  Param,
-  Put,
-  Delete
 } from "routing-controllers";
 import {
   PaginationInfo,

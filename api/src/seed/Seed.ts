@@ -1,13 +1,8 @@
+import { openConnection } from "../persistence";
 import { User, Role } from "../entity/User";
 import { getManager } from "typeorm";
 import { ProductType } from "../entity/ProductType";
 import { Product } from "../entity/Product";
-import { Customer } from "../entity/Customer";
-
-const ADMIN_USER_ID = "admin";
-
-export class Seed {
-  public static async run() {
     await openConnection();
     await Seed.addUsers();
     await Seed.addProductTypes();

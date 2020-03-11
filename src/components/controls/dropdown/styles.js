@@ -1,13 +1,8 @@
+const ITEM_HEIGHT = 48;
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    height: 250
-  },
-  chip: {
-    margin: theme.spacing.unit / 4
-  },
-  // We had to use a lot of global selectors in order to style react-select.
   // We are waiting on https://github.com/JedWatson/react-select/issues/1679
   // to provide a much better implementation.
   // Also, we had to reset the default style injected by the library.

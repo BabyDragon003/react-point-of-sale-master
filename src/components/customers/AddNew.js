@@ -1,13 +1,8 @@
+import React, { Component } from "react";
 import * as equal from "fast-deep-equal";
 import { withRouter } from "react-router";
 import { withStyles } from "material-ui/styles";
 import Container from "../controls/Container";
-import Form from "../controls/Form";
-import { isValueExists, isValidEmail } from "../../utils";
-import CustomTextField from "../controls/textfields/CustomTextField";
-import api from "../../api";
-import Prompt from "../controls/dialog/Prompt";
-import CircularLoader from "../controls/loader/CircularLoader";
 import Message from "../controls/Message";
 
 // eslint-disable-next-line

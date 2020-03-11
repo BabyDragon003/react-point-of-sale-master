@@ -1,3 +1,4 @@
+import update from "immutability-helper";
 import { USER_LOGGED_IN } from "../types";
 
 export default function user(state = {}, action = {}) {
