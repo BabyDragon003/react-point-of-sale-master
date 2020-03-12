@@ -3,16 +3,11 @@ import MomentUtils from "material-ui-pickers/utils/moment-utils";
 import MuiPickersUtilsProvider from "material-ui-pickers/utils/MuiPickersUtilsProvider";
 import DatePicker from "material-ui-pickers/DatePicker";
 import KeyboardArrowLeft from "material-ui-icons/KeyboardArrowLeft";
-  textField: {
-    [theme.breakpoints.up("xs")]: {
-      width: 250
-    },
-    [theme.breakpoints.up("sm")]: {
-      width: 300
-    },
-    [theme.breakpoints.up("md")]: {
-      width: 500
-    },
+import KeyboardArrowRight from "material-ui-icons/KeyboardArrowRight";
+import DateRange from "material-ui-icons/DateRange";
+import { withStyles } from "material-ui";
+
+// eslint-disable-next-line
     marginRight: 10,
     marginTop: 20
   },

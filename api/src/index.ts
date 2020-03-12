@@ -3,16 +3,11 @@ import { verify } from 'jsonwebtoken';
 import { openConnection } from './persistence';
 import { createExpressServer, useContainer, Action } from 'routing-controllers';
 import { Container } from 'typedi';
-  action: Action,
-  roles: Role[]
-): Promise<boolean> {
-  return new Promise<boolean>(resolve => {
-    const token = (action.request.headers['authorization'] || '').replace(
-      'Bearer ',
-      ''
-    );
+import { Application } from 'express';
+import { config } from './config';
+import { Role } from './entity/User';
+import { Claim } from './dtos/authTypes';
 
-    if (!token) {
       throw new Error('Invalid token');
     }
 

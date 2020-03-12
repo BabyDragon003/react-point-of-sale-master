@@ -3,16 +3,11 @@ import { CrudServices, IFetchPageQuery } from "./CrudServices";
 import { Receiving } from "../entity/Receiving";
 import { Stock } from "../entity/Stock";
 
-  }
+export class ReceivingServices {
+  private crudServices: CrudServices<Receiving>;
 
-  public async create(userId: string, receiving: Receiving) {
-    const connection = getConnection();
-    const queryRunner = connection.createQueryRunner();
-
-    await queryRunner.connect();
-
-    // New transaction:
-    await queryRunner.startTransaction();
+  constructor() {
+    this.crudServices = new CrudServices<Receiving>();
 
     try {
       await queryRunner.manager.insert(Receiving, receiving);

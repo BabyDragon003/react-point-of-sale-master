@@ -3,6 +3,12 @@ import { withStyles } from "material-ui/styles";
 import SubmitCancel from "./SubmitCancel";
 
 // eslint-disable-next-line
+const styles = theme => ({
+  form: {
+    marginLeft: 20
+  }
+});
+
 const Form = props => (
   <form
     onSubmit={props.onSubmit}

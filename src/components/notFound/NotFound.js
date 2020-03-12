@@ -8,7 +8,3 @@ const NotFound = () => (
       title="Page not found"
       message="The requested page is not found."
     />
-  </Container>
-);
-
-export default NotFound;

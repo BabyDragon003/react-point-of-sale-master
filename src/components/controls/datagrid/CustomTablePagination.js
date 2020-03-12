@@ -3,6 +3,12 @@ import { withStyles } from "material-ui/styles";
 import Toolbar from "material-ui/Toolbar";
 import Typography from "material-ui/Typography";
 import { TableCell } from "material-ui/Table";
+import TablePaginationActions from "./TablePaginationActions";
+
+export const styles = theme => ({
+  root: {
+    fontSize: theme.typography.pxToRem(12),
+    // Increase the specificity to override TableCell.
     "&:last-child": {
       padding: 0
     }

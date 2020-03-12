@@ -3,16 +3,11 @@ import { withRouter } from "react-router";
 import { withStyles } from "material-ui/styles";
 import Hidden from "material-ui/Hidden";
 import Drawer from "material-ui/Drawer";
-// eslint-disable-next-line
-const styles = theme => ({
-  drawerPaper: {
-    width: drawerWidth,
-    [theme.breakpoints.up("md")]: {
-      position: "relative"
-    },
-    height: "calc(100vh - 1px)",
-    borderBottom: "1px solid #e0e0e0"
-  },
+import ShoppingCart from "material-ui-icons/ShoppingCart";
+import Divider from "material-ui/Divider";
+import Menus from "./Menus";
+
+const drawerWidth = 200;
   drawerPaper2: {
     width: drawerWidth,
     height: "calc(100vh - 1px)",
