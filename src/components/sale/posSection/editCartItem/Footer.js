@@ -8,6 +8,17 @@ const styles = () => ({
 });
 
 const Footer = ({ item, classes }) => (
+  <div className={classes.root}>
+    <FooterPriceLabel
+      price={currency(item.price)
+        .multiply(item.qty)
+        .toString()}
+      title="Net Price"
+    />
+    <br />
+    <br />
+    <FooterPriceLabel
+      price={currency(item.discount)
         .multiply(item.qty)
         .toString()}
       title="Total Discount"

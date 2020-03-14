@@ -8,26 +8,16 @@ import {
   QueryParam,
   Param,
   Put,
-export class CustomersController {
-  private crudServices: CrudServices<Customer>;
+  Delete
+} from "routing-controllers";
+import {
+  PaginationInfo,
+  IPaginationQueryParam
+} from "../../decorators/PaginationInfo";
+import { CrudServices, IFetchPageQuery } from "../../services/CrudServices";
+import { CurrentUser } from "../../decorators/CurrentUser";
 
-  constructor() {
-    this.crudServices = new CrudServices<Customer>();
-    this.crudServices.setEntity(Customer);
-  }
-
-  @Get("/:id")
-  public async getCustomerById(@Param("id") id: string): Promise<any> {
-    const res = await this.crudServices.fetchById(id);
-    return res || {};
-  }
-
-  @Get()
-  public async getCustomers(
-    @PaginationInfo() paginationInfo: IPaginationQueryParam,
-    @QueryParam("q") search?: string
-  ): Promise<Customer[]> {
-    const query: IFetchPageQuery = {
+@JsonController("/customers")
       search,
       perPage: paginationInfo.perPage,
       page: paginationInfo.pageNo

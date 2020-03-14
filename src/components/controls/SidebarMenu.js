@@ -18,27 +18,6 @@ const styles = theme => ({
     width: 19
   },
   selected: {
-    backgroundColor: "#00000014",
-    borderLeft: "5px solid #3f50b5",
-    paddingLeft: 20
-  },
-  normal: {
-    backgroundColor: "white"
-  }
-});
-
-class SidebarMenu extends Component {
-  state = {};
-
-  getClassName = () => {
-    const { isSelected, classes } = this.props;
-
-    if (isSelected) return classNames(classes.listItem, classes.selected);
-
-    return classNames(classes.listItem, classes.normal);
-  };
-
-  render() {
     const { classes } = this.props;
 
     return (

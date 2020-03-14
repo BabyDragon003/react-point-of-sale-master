@@ -18,27 +18,6 @@ export class TransactionDetails extends Base {
 
   @ManyToOne(type => Product)
   @JoinColumn({ name: "productId" })
-  product: Product;
-
-  @IsNotEmpty()
-  @Column()
-  @PrimaryColumn()
-  productId: string;
-
-  @IsPositive()
-  @Column()
-  qty: number;
-
-  @Column({ type: "float" })
-  costPrice: number;
-
-  @Column({ type: "float" })
-  sellingPrice: number;
-
-  @IsNumber()
-  @Min(0)
-  @Column({ type: "float" })
-  discount: number;
 
   @IsNumber()
   @Min(0)

@@ -8,3 +8,5 @@ export class UserLoginPost {
 
 export class Claim {
   userid: string;
+  role: Role;
+}

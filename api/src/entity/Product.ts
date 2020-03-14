@@ -8,6 +8,17 @@ export class Product extends Base {
   @IsNotEmpty()
   @PrimaryColumn()
   id: string;
+
+  @IsNotEmpty()
+  @Column()
+  name: string;
+
+  @IsNotEmpty()
+  @Column()
+  description: string;
+
+  @IsPositive()
+  @Column({ type: "float" })
   costPrice: number;
 
   @IsPositive()

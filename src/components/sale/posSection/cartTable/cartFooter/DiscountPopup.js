@@ -8,6 +8,17 @@ import {
   updateDiscountOnItems,
   updateDiscountOnTotal
 } from "../../../../../actions/cart";
+
+const styles = () => ({
+  switch: {
+    marginLeft: "-20px"
+  },
+  label: {
+    fontSize: "13px",
+    fontWeight: 400
+  }
+});
+
 class DiscountPopup extends Component {
   initialState = {
     discount: "",

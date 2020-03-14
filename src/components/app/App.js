@@ -8,6 +8,17 @@ const App = props => {
   const checkForAuth = () => {
     if (props.isLoggedIn) {
       return <Home />;
+    }
+    return <LoginPage />;
+  };
+  return <Fragment>{checkForAuth()}</Fragment>;
+};
+
+function mapStateToProps(state) {
+  const isLoggedIn = state.auth !== undefined ? !!state.auth.tokens : false;
+
+  return {
+    isLoggedIn
   };
 }
 

@@ -8,26 +8,16 @@ import NumberTextField from "../../../controls/textfields/NumberTextField";
 
 const styles = theme => ({
   textField: {
-    transactionId,
-    cart,
-    classes,
-    onChange,
-    onSubmit,
-    onCancel
-  } = props;
-  const { summary } = cart;
+    width: "470px",
+    [theme.breakpoints.up("md")]: {
+      width: "470px"
+    }
+  }
+});
 
-  const totalDiscount = currency(summary.discountOnItems)
-    .add(summary.discountOnTotal)
-    .toString();
-
-  return (
-    <Paper>
-      <Form
-        style={{ marginLeft: "0px", padding: "15px" }}
-        id="customer"
-        onSubmit={onSubmit}
-        onCancel={onCancel}
+const NormalSaleForm = props => {
+  const {
+    errors,
       >
         <CustomLabel
           labelStyle={{ color: "red" }}

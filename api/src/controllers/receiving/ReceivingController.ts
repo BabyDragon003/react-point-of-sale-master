@@ -8,6 +8,17 @@ import {
   QueryParam,
   Param,
   Put,
+  Delete
+} from "routing-controllers";
+import {
+  PaginationInfo,
+  IPaginationQueryParam
+} from "../../decorators/PaginationInfo";
+import { IFetchPageQuery } from "../../services/CrudServices";
+import { ReceivingServices } from "../../services/ReceivingServices";
+import { CurrentUser } from "../../decorators/CurrentUser";
+
+@JsonController("/receivings")
 @Authorized()
 export class ReceivingsController {
   constructor(private receivingServices: ReceivingServices) {}

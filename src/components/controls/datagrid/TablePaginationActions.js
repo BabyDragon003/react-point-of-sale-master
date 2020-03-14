@@ -8,26 +8,16 @@ import LastPageIcon from "material-ui-icons/LastPage";
 
 const styles = theme => ({
   root: {
-      page,
-      rowsPerPage,
-      onFirst,
-      onPrev,
-      onLast,
-      onNext
-    } = this.props;
+    flexShrink: 0,
+    color: theme.palette.text.secondary,
+    marginLeft: theme.spacing.unit * 2.5
+  }
+});
 
-    return (
-      <div className={classes.root}>
-        <IconButton
-          onClick={onFirst}
-          disabled={page === 1}
-          aria-label="First Page"
-        >
-          <FirstPageIcon />
-        </IconButton>
-
-        <IconButton
-          onClick={onPrev}
+class TablePaginationActions extends Component {
+  render() {
+    const {
+      classes,
           disabled={page === 1}
           aria-label="Previous Page"
         >

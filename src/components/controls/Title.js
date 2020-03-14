@@ -8,6 +8,17 @@ const styles = theme => ({
     color: "#000000a3",
     lineHeight: 1.1,
     margin: 0,
+    paddingBottom: 8,
+    fontSize: 18,
+    fontWeight: 400,
+    display: "inline-block",
+    borderBottom: "3px solid #3f50b5"
+  }
+});
+
+function Title({ classes, title }) {
+  return (
+    <Fragment>
       <div className={classes.title}>{title}</div>
       <Divider />
     </Fragment>
