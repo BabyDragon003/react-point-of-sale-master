@@ -18,16 +18,11 @@ class TablePaginationActions extends Component {
   render() {
     const {
       classes,
-          disabled={page === 1}
-          aria-label="Previous Page"
-        >
-          <KeyboardArrowLeft />
-        </IconButton>
-
-        <IconButton
-          onClick={onNext}
-          disabled={page >= Math.ceil(count / rowsPerPage)}
-          aria-label="Next Page"
+      count,
+      page,
+      rowsPerPage,
+      onFirst,
+      onPrev,
         >
           <KeyboardArrowRight />
         </IconButton>

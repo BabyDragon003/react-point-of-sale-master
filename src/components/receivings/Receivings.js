@@ -23,32 +23,6 @@ const styles = theme => ({
   },
   wrapper: {
     position: "relative",
-    margin: "20px 5px 5px 5px"
-  }
-});
-
-class Receivings extends Component {
-  receivingsColumns = [
-    "Order Id",
-    "Product",
-    "Vendor",
-    "Qty",
-    "Price",
-    "Paid",
-    "Date"
-  ];
-
-  state = {
-    clearSearch: false,
-    serachQuery: "",
-    message: "",
-    showMessage: false,
-    isError: false,
-    isLoading: false,
-    showConfirmDeleteDialog: false
-  };
-
-  onListClick = () => {
     this.setState({ clearSearch: true, serachQuery: "", showMessage: false });
   };
 
