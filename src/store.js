@@ -3,12 +3,6 @@ import { createStore, applyMiddleware } from "redux";
 import { createLogger } from "redux-logger";
 import reducers from "./reducers";
 
-const persistedState = sessionStorage.getItem("appstate")
-  ? JSON.parse(sessionStorage.getItem("appstate"))
-  : {};
-
-const configureStore = () => {
-  const middlewares = [];
 
   middlewares.push(thunk);
 

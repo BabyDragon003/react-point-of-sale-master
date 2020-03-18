@@ -3,12 +3,6 @@ import {
   PrimaryGeneratedColumn,
   JoinColumn,
   ManyToOne,
-  Column,
-  Entity
-} from "typeorm";
-import { Product } from "./Product";
-import { Vendor } from "./Vendor";
-import { IsNotEmpty, IsPositive } from "class-validator";
 
 @Entity()
 export class Receiving extends Base {

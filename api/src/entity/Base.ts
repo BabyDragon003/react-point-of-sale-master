@@ -3,12 +3,6 @@ import { User } from "./User";
 import { Exclude } from "class-transformer";
 
 export abstract class Base {
-  @Exclude()
-  @CreateDateColumn()
-  createdAt?: Date;
-
-  @Exclude()
-  @UpdateDateColumn()
   updatedAt?: Date;
 
   @Exclude()
@@ -23,3 +17,7 @@ export abstract class Base {
   @ManyToOne(type => User, {
     onDelete: "NO ACTION",
     onUpdate: "CASCADE",
+    nullable: false
+  })
+  updatedBy: string;
+}

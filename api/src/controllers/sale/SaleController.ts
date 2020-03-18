@@ -3,12 +3,6 @@ import {
   JsonController,
   Authorized,
   Get,
-  Post,
-  Body,
-  Param,
-  Delete
-} from "routing-controllers";
-import { CurrentUser } from "../../decorators/CurrentUser";
 import { TransactionDetails } from "../../entity/TransactionDetails";
 import { CheckoutSale } from "../../dtos/sale";
 

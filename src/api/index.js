@@ -3,12 +3,6 @@ import apiBuilder, { URL_PREFIX } from "./apiBuilder";
 import "./axiosClient";
 import transaction from "./transaction";
 
-const auth = {
-  login: async ({ username, password }) => {
-    try {
-      const res = await axios.post(`${URL_PREFIX}/login`, {
-        userid: username,
-        password
       });
       const { authToken } = res.data;
 

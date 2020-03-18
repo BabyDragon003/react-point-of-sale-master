@@ -3,12 +3,6 @@ import Button from "material-ui/Button";
 import Dialog, {
   DialogActions,
   DialogContent,
-  DialogContentText,
-  DialogTitle
-} from "material-ui/Dialog";
-
-const YesNo = props => (
-  <Dialog
     open={props.open}
     aria-labelledby="alert-dialog-title"
     aria-describedby="alert-dialog-description"

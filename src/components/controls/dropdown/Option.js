@@ -3,12 +3,6 @@ import { MenuItem } from "material-ui/Menu";
 
 class Option extends Component {
   handleClick = event => {
-    this.props.onSelect(this.props.option, event);
-  };
-
-  render() {
-    const { children, isFocused, isSelected, onFocus } = this.props;
-
     return (
       <MenuItem
         onFocus={onFocus}
@@ -23,3 +17,6 @@ class Option extends Component {
       </MenuItem>
     );
   }
+}
+
+export default Option;

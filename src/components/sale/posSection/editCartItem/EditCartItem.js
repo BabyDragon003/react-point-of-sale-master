@@ -3,12 +3,6 @@ import currency from "currency.js";
 import FormDialog from "../../../controls/dialog/FormDialog";
 import CustomTextField from "../../../controls/textfields/CustomTextField";
 import NumberTextField from "../../../controls/textfields/NumberTextField";
-import Footer from "./Footer";
-
-class EditCartItem extends Component {
-  state = {
-    errors: {}
-  };
 
   onChange = e => {
     this.setState({

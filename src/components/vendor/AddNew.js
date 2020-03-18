@@ -3,12 +3,6 @@ import * as equal from "fast-deep-equal";
 import { withRouter } from "react-router";
 import { withStyles } from "material-ui/styles";
 import Container from "../controls/Container";
-import Form from "../controls/Form";
-import { isValueExists, isValidEmail } from "../../utils";
-import CustomTextField from "../controls/textfields/CustomTextField";
-import api from "../../api";
-import Prompt from "../controls/dialog/Prompt";
-import CircularLoader from "../controls/loader/CircularLoader";
 import Message from "../controls/Message";
 
 // eslint-disable-next-line
@@ -23,6 +17,32 @@ class AddNew extends Component {
     id: "",
     name: "",
     address: "",
+    mobile: "",
+    description: "",
+    email: ""
+  };
+
+  state = {
+    data: this.initialData,
+    errors: {},
+    showMessageDialog: false,
+    isLoading: false,
+    message: false,
+    showMessage: false,
+    isError: false,
+    isEdit: false
+  };
+
+  async componentDidMount() {
+    try {
+      const { id } = this.props.match.params;
+
+      if (!id) {
+        return;
+      }
+
+      this.setState({ isLoading: true });
+
       const stateToUpdate = {};
       const res = await api.vendor.fetchById(id);
 

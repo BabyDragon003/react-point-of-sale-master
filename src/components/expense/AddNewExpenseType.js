@@ -3,12 +3,6 @@ import * as equal from "fast-deep-equal";
 import { withRouter } from "react-router";
 import Container from "../controls/Container";
 import Form from "../controls/Form";
-import CustomTextField from "../controls/textfields/CustomTextField";
-import { isValueExists } from "../../utils";
-import api from "../../api";
-import Message from "../controls/Message";
-import Prompt from "../controls/dialog/Prompt";
-import CircularLoader from "../controls/loader/CircularLoader";
 
 class AddNewExpenseType extends Component {
   initialData = {

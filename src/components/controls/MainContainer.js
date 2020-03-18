@@ -3,12 +3,6 @@ import { withStyles } from "material-ui";
 import Paper from "material-ui/Paper";
 import classNames from "classnames";
 
-const styles = theme => ({
-  container: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: "70px 10px 15px 10px"
-  },
   paper: {
     [theme.breakpoints.up("xs")]: {
       width: "calc(100vw - 20px)"

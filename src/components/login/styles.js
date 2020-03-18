@@ -3,12 +3,6 @@ const styles = theme => ({
   root: {
     background: "#efefef",
     height: "100vh"
-  },
-  paper: {
-    minWidth: 300,
-    display: "flex",
-    flexDirection: "column",
-    width: "350px",
     minHeight: "230px",
     margin: "auto",
     alignItems: "center",

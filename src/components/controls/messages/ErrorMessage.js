@@ -3,12 +3,6 @@ import { withStyles } from "material-ui/styles";
 import classNames from "classnames";
 
 const styles = () => ({
-  root: {
-    padding: "15px",
-    border: "1px solid #e91e639c",
-    background: "#f4433612",
-    color: "#f44336d6",
-    margin: 5,
     width: "100%",
     fontSize: 14,
     borderRadius: 3
