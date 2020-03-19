@@ -3,16 +3,11 @@ import currency from "currency.js";
 import { connect } from "react-redux";
 import { Switch, withStyles } from "material-ui";
 import FormDialog from "../../../../controls/dialog/FormDialog";
-const styles = () => ({
-  switch: {
-    marginLeft: "-20px"
-  },
-  label: {
-    fontSize: "13px",
-    fontWeight: 400
-  }
-});
-
+import NumberTextField from "../../../../controls/textfields/NumberTextField";
+import {
+  updateDiscountOnItems,
+  updateDiscountOnTotal
+} from "../../../../../actions/cart";
 class DiscountPopup extends Component {
   initialState = {
     discount: "",

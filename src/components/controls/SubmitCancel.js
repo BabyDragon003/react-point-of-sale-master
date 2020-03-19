@@ -8,17 +8,6 @@ const styles = theme => ({
     margin: "30px 10px 30px 0px"
   }
 });
-
-const SubmitCancel = ({ classes, onCancelClick }) => (
-  <Fragment>
-    <Button
-      type="submit"
-      size="small"
-      className={classes.button}
-      variant="raised"
-      color="primary"
-    >
-      Submit
     </Button>
 
     <Button

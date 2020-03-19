@@ -3,16 +3,11 @@ import {
   Get,
   Post,
   Body,
-} from "routing-controllers";
-import {
-  PaginationInfo,
-  IPaginationQueryParam
-} from "../../decorators/PaginationInfo";
-import { CrudServices, IFetchPageQuery } from "../../services/CrudServices";
-import { CurrentUser } from "../../decorators/CurrentUser";
-
-@JsonController("/vendors")
-@Authorized()
+  JsonController,
+  Authorized,
+  QueryParam,
+  Param,
+  Put,
 export class VendorsController {
   private crudServices: CrudServices<Vendor>;
 

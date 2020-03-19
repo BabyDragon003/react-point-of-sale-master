@@ -3,16 +3,11 @@ import { Base } from "./Base";
 import { ProductType } from "./ProductType";
 import { IsNotEmpty, IsPositive } from "class-validator";
 
+@Entity()
+export class Product extends Base {
   @IsNotEmpty()
-  @Column()
-  name: string;
-
-  @IsNotEmpty()
-  @Column()
-  description: string;
-
-  @IsPositive()
-  @Column({ type: "float" })
+  @PrimaryColumn()
+  id: string;
   costPrice: number;
 
   @IsPositive()
