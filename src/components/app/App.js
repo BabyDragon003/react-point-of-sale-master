@@ -8,7 +8,8 @@ const App = props => {
   const checkForAuth = () => {
     if (props.isLoggedIn) {
       return <Home />;
+    }
+    return <LoginPage />;
   };
-}
-
-export default withRouter(connect(mapStateToProps, null)(App));
+  return <Fragment>{checkForAuth()}</Fragment>;
+};

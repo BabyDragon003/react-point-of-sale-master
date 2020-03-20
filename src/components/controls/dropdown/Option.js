@@ -8,10 +8,8 @@ class Option extends Component {
 
   render() {
     const { children, isFocused, isSelected, onFocus } = this.props;
-        {children}
-      </MenuItem>
-    );
-  }
-}
 
-export default Option;
+    return (
+      <MenuItem
+        onFocus={onFocus}
+        selected={isFocused}

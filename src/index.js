@@ -9,4 +9,7 @@ import store from "./store";
 
 import registerServiceWorker from "./registerServiceWorker";
 
-registerServiceWorker();
+import "./index.css";
+
+ReactDOM.render(
+  <BrowserRouter>

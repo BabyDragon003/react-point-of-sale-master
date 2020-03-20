@@ -8,3 +8,6 @@ export default function user(state = {}, action = {}) {
         tokens: { $set: action.authInfo }
       });
     default:
+      return state;
+  }
+}
