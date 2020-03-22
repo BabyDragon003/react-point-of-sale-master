@@ -13,6 +13,22 @@ const styles = theme => ({
   leftIcon: {
     marginRight: theme.spacing.unit
   },
+  button: {
+    margin: theme.spacing.unit
+  },
+  iconSmall: {
+    fontSize: 20
+  },
+  wrapper: {
+    marginTop: 20,
+    position: "relative"
+  }
+});
+
+class ProductTab extends Component {
+  productColumns = [
+    "ID",
+    "Name",
     "Description",
     "Cost price",
     "Selling price",

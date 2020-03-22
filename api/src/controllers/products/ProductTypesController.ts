@@ -13,6 +13,22 @@ import {
 import { CrudServices, IFetchPageQuery } from '../../services/CrudServices';
 import { CurrentUser } from '../../decorators/CurrentUser';
 
+import {
+  PaginationInfo,
+  IPaginationQueryParam
+} from '../../decorators/PaginationInfo';
+
+@JsonController('/productTypes')
+@Authorized()
+export class ProductTypesController {
+  private crudServices: CrudServices<ProductType>;
+
+  constructor() {
+    this.crudServices = new CrudServices<ProductType>();
+    this.crudServices.setEntity(ProductType);
+  }
+
+  @Get('/all/items')
   public async getAllProductTypes(): Promise<ProductType[]> {
     return await this.crudServices.fetchAll();
   }

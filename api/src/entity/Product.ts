@@ -13,6 +13,22 @@ export class Product extends Base {
   @Column()
   name: string;
 
+  @IsNotEmpty()
+  @Column()
+  description: string;
+
+  @IsPositive()
+  @Column({ type: "float" })
+  costPrice: number;
+
+  @IsPositive()
+  @Column({ type: "float" })
+  sellingPrice: number;
+
+  @ManyToOne(type => ProductType, {
+    onDelete: "RESTRICT",
+    onUpdate: "CASCADE",
+    cascade: ["insert"]
   })
   @JoinColumn({ name: "productTypeId" })
   productType: ProductType;

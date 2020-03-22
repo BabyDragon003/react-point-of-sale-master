@@ -13,6 +13,22 @@ const styles = () => ({
     fontSize: 14,
     borderRadius: 3
   }
+});
+
+const ErrorMessage = props => {
+  const style = {};
+
+  if (props.show && props.show === true) {
+    style.display = "block";
+  } else {
+    style.display = "none";
+  }
+
+  return (
+    <div
+      className={classNames(props.classes.root, props.className)}
+      style={style}
+    >
       <span>{props.message}</span>
     </div>
   );

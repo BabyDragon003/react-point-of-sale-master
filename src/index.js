@@ -13,3 +13,11 @@ import "./index.css";
 
 ReactDOM.render(
   <BrowserRouter>
+    <Provider store={store}>
+      <Route component={App} />
+    </Provider>
+  </BrowserRouter>,
+  document.getElementById("root")
+);
+
+registerServiceWorker();

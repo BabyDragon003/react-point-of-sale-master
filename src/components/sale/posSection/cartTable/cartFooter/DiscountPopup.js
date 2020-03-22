@@ -13,6 +13,22 @@ const styles = () => ({
   switch: {
     marginLeft: "-20px"
   },
+  label: {
+    fontSize: "13px",
+    fontWeight: 400
+  }
+});
+
+class DiscountPopup extends Component {
+  initialState = {
+    discount: "",
+    checkedB: false,
+    error: "",
+    discountText: "Apply to order total"
+  };
+
+  state = {
+    ...this.initialState
   };
 
   onDiscountChange = e => {

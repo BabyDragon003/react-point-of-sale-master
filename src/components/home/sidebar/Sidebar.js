@@ -13,6 +13,22 @@ const drawerWidth = 200;
 const styles = theme => ({
   drawerPaper: {
     width: drawerWidth,
+    [theme.breakpoints.up("md")]: {
+      position: "relative"
+    },
+    height: "calc(100vh - 1px)",
+    borderBottom: "1px solid #e0e0e0"
+  },
+  drawerPaper2: {
+    width: drawerWidth,
+    height: "calc(100vh - 1px)",
+    borderBottom: "1px solid #e0e0e0"
+  },
+  logo: {
+    height: "64px",
+    background: "#3f51b5"
+  },
+  logoContainer: {
     padding: "18px 5px 5px 15px",
     display: "flex",
     color: "white",
